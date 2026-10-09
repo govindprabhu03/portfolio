@@ -1,0 +1,1 @@
+Read README.md first. Default task: deploy `public/` to Vercel as a static site with `npx vercel --prod --yes` (project name `govind-prabhu`) and report the URL. Do not edit `public/index.html` by hand — it is a compiled bundle; content edits go in `design/portfolio.dc.html`. Never mention "Ravindra Bhavan Sankhali".

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><title>Govind Prabhu · Full-Stack Developer</title><meta name="description" content="Full-stack developer from Goa. Six tools shipped at Siemens, plus AI products: Smart Inventory, ATLAS, AeroTrans AI, KalaSphere-AI."><template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0f1012"/><rect x="30" y="30" width="40" height="40" rx="9" fill="#c8f560"/><text x="50" y="57" text-anchor="middle" font-family="Arial" font-weight="800" font-size="18" fill="#0f1012">GP</text></svg></template><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700;800&display=swap"><style>html{scroll-behavior:smooth}body{margin:0;background:#0f1012;color:#ecebe6;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:#c8f560;text-decoration:none}@media(max-width:1000px){[data-topnav]{display:none!important}}a:hover{color:#fff}::selection{background:#c8f560;color:#0f1012}input,textarea,button{font:inherit;color:inherit}@keyframes flow{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}@keyframes pulse{50%{opacity:.35}}</style></helmet>
+
+<header style="position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,40px);background:rgba(15,16,18,.86);backdrop-filter:blur(10px);border-bottom:1px solid #22242a">
+<a href="#top" style="flex:none;white-space:nowrap;display:flex;align-items:center;gap:10px;color:#ecebe6"><span style="width:30px;height:30px;display:grid;place-items:center;background:#c8f560;color:#0f1012;font:800 13px Archivo,sans-serif;border-radius:7px">GP</span><span style="font:600 14px Archivo,sans-serif">Govind Prabhu</span></a>
+<nav data-topnav="1" style="display:flex;gap:clamp(12px,1.6vw,22px);flex-wrap:wrap;justify-content:center;min-width:0;font:500 13px Archivo,sans-serif;white-space:nowrap"><a href="#lab" style="color:#9b9a94">Siemens Lab</a><a href="#kalasphere" style="color:#9b9a94">KalaSphere-AI</a><a href="#projects" style="color:#9b9a94">Projects</a><a href="#stack" style="color:#9b9a94">Stack</a><a href="#about" style="color:#9b9a94">About</a><a href="#contact" style="color:#9b9a94">Contact</a></nav>
+<button onClick="{{ openPalette }}" style="flex:none;white-space:nowrap;display:flex;align-items:center;gap:10px;background:#16171a;border:1px solid #2a2c31;border-radius:8px;padding:7px 10px;cursor:pointer;font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">Jump to… <span style="padding:2px 6px;border:1px solid #2a2c31;border-radius:4px;color:#ecebe6">⌘K</span></button>
+</header>
+
+<section id="top" style="max-width:1280px;margin:0 auto;padding:clamp(56px,9vw,120px) clamp(16px,4vw,40px) 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:56px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;align-items:center;gap:10px;font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94"><span style="width:8px;height:8px;border-radius:50%;background:#c8f560;animation:pulse 1.6s infinite"></span>Full-stack developer · Sanquelim, Goa · open to roles from 2027</div>
+<h1 style="margin:0;font:400 clamp(52px,7.4vw,112px)/.92 'Instrument Serif',serif;letter-spacing:-.02em;text-wrap:balance">I turn spreadsheets into <span style="font-style:italic;color:#c8f560">software</span> people use.</h1>
+<p style="margin:0;max-width:560px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:#b9b8b1;text-wrap:pretty">I'm Govind. At Siemens I replaced six Excel, macro and paper workflows with working tools. I also build my own products, including an agentic AI assistant, a multi-tenant inventory platform, an aviation translator and KalaSphere-AI, a multi-tenant ERP. Everything below is interactive, so you can try the work instead of just reading about it.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#lab" style-hover="background:#ddff7a" style="background:#c8f560;color:#0f1012;padding:13px 20px;border-radius:9px;font:700 15px Archivo,sans-serif">Try the work ↓</a><a href="mailto:prabhugovind0302@gmail.com" style-hover="border-color:#ecebe6" style="border:1px solid #3a3c42;color:#ecebe6;padding:13px 20px;border-radius:9px;font:600 15px Archivo,sans-serif">prabhugovind0302@gmail.com</a></div>
+</div>
+<div style="background:#16171a;border:1px solid #2a2c31;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;justify-content:space-between;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#6c6b66"><span>SYSTEM MAP · HOW I BUILD</span><span style="color:#c8f560">● LIVE</span></div>
+<sc-for list="{{ layers }}" as="l" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="background:#1d1f23;border:1px solid #2a2c31;border-radius:10px;padding:14px 16px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;align-items:center">
+<span style="font:600 12px 'IBM Plex Mono',monospace;color:#c8f560">{{ l.k }}</span>
+<span style="font:500 13.5px Archivo,sans-serif;color:#d9d8d2">{{ l.v }}</span>
+</div>
+<sc-if value="{{ l.link }}" hint-placeholder-val="{{ true }}">
+<div style="position:relative;height:14px;margin:0 50%;width:2px;background:#2a2c31"><span style="position:absolute;left:-2px;width:6px;height:6px;border-radius:50%;background:#c8f560;animation:pulse 1.2s infinite"></span></div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section style="border-top:1px solid #22242a;border-bottom:1px solid #22242a;background:#131417">
+<div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+<div style="padding:26px clamp(16px,4vw,40px);border-right:1px solid #22242a;display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">6</span><span style="font-size:14px;color:#9b9a94">tools shipped at Siemens in 3 months</span></div>
+<div style="padding:26px clamp(16px,4vw,40px);border-right:1px solid #22242a;display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">14,000+</span><span style="font-size:14px;color:#9b9a94">SAP rows a month, no longer reconciled by hand</span></div>
+<div style="padding:26px clamp(16px,4vw,40px);border-right:1px solid #22242a;display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">3</span><span style="font-size:14px;color:#9b9a94">teams served: finance, quality, production</span></div>
+<div style="padding:26px clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">Web · Mobile · Desktop</span><span style="font-size:14px;color:#9b9a94">platforms I've shipped to</span></div>
+</div>
+</section>
+
+<section id="lab" style="max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px) 80px;display:flex;flex-direction:column;gap:40px;scroll-margin-top:60px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 60px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">01 · EXPERIENCE · SIEMENS LIMITED, VERNA</span><h2 style="margin:0;font:400 clamp(44px,6vw,84px)/.95 'Instrument Serif',serif">The Siemens <span style="font-style:italic">Lab</span></h2></div>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#b9b8b1;text-wrap:pretty">Automation &amp; Digitalization Intern, Aug to Oct 2026. Pick a tool to see the problem, what I built, the result, and a working demo of how it behaves. Demo data is made up; the logic follows the real tool.</p>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+<div style="flex:1 1 280px;max-width:100%;display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ tools }}" as="t" hint-placeholder-count="6">
+<button onClick="{{ t.pick }}" style="text-align:left;cursor:pointer;background:{{ t.bg }};border:1px solid {{ t.bd }};border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:4px 10px">
+<span style="font:600 12px 'IBM Plex Mono',monospace;color:{{ t.nc }}">{{ t.no }}</span>
+<span style="font:700 16px/1.25 Archivo,sans-serif;color:#ecebe6">{{ t.title }}</span>
+<span></span>
+<span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#6c6b66">{{ t.area }}</span>
+</button>
+</sc-for>
+</div>
+
+<div style="flex:3 1 560px;min-width:0;background:#16171a;border:1px solid #2a2c31;border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
+<div style="padding:26px 28px;display:flex;flex-direction:column;gap:18px;border-bottom:1px solid #2a2c31">
+<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline"><h3 style="margin:0;font:800 clamp(26px,2.8vw,36px)/1.05 Archivo,sans-serif;letter-spacing:-.02em">{{ cur.title }}</h3><span style="font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">{{ cur.stack }}</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#ff7a59">BEFORE</span><p style="margin:0;font-size:14.5px;line-height:1.6;color:#b9b8b1;text-wrap:pretty">{{ cur.before }}</p></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#ecebe6">WHAT I BUILT</span><p style="margin:0;font-size:14.5px;line-height:1.6;color:#b9b8b1;text-wrap:pretty">{{ cur.built }}</p></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">RESULT</span><p style="margin:0;font-size:14.5px;line-height:1.6;color:#ecebe6;font-weight:500;text-wrap:pretty">{{ cur.result }}</p></div>
+</div>
+</div>
+<div style="padding:24px 28px 28px;background:#121316;display:flex;flex-direction:column;gap:16px;min-height:330px">
+<div style="display:flex;justify-content:space-between;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#6c6b66"><span>▸ INTERACTIVE DEMO</span><span>{{ cur.demoHint }}</span></div>
+
+<sc-if value="{{ is0 }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><button onClick="{{ runRfc }}" style-hover="background:#ddff7a" style="cursor:pointer;background:#c8f560;color:#0f1012;border:0;border-radius:8px;padding:10px 16px;font:700 14px Archivo,sans-serif">{{ rfcBtn }}</button><span style="font:600 22px 'IBM Plex Mono',monospace">{{ rfcRows }}</span><span style="font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">rows processed</span></div>
+<div style="height:6px;background:#22242a;border-radius:3px;overflow:hidden"><div style="height:100%;width:{{ rfcPct }};background:#c8f560;transition:width .08s linear"></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px">
+<sc-for list="{{ rfcSteps }}" as="s" hint-placeholder-count="4">
+<div style="border:1px solid {{ s.bd }};border-radius:8px;padding:10px 12px;font:500 12.5px/1.4 'IBM Plex Mono',monospace;color:{{ s.c }}">{{ s.mark }} {{ s.t }}</div>
+</sc-for>
+</div>
+<sc-if value="{{ rfcDone }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;font:500 13px 'IBM Plex Mono',monospace"><span style="color:#9b9a94">Shipped as →</span><span style="padding:5px 10px;border:1px solid #c8f560;border-radius:6px;color:#c8f560">rfc_builder.exe</span><span style="padding:5px 10px;border:1px solid #c8f560;border-radius:6px;color:#c8f560">Flask web app</span><span style="padding:5px 10px;border:1px solid #c8f560;border-radius:6px;color:#c8f560">$ rfc build</span><span style="color:#9b9a94">· row count within 0.7% of manual</span></div>
+</sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ is1 }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:12px">
+<input value="{{ snQuery }}" onChange="{{ setSn }}" placeholder="Search a serial number, e.g. 4021" style="background:#1d1f23;border:1px solid #3a3c42;border-radius:9px;padding:12px 14px;font:500 15px 'IBM Plex Mono',monospace;outline:none"></input>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ snSources }}" as="s" hint-placeholder-count="6">
+<span style="font:500 11.5px 'IBM Plex Mono',monospace;padding:4px 9px;border-radius:5px;border:1px solid {{ s.bd }};color:{{ s.c }}">{{ s.k }} · {{ s.n }}</span>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;border:1px solid #2a2c31;border-radius:9px;overflow:hidden">
+<sc-for list="{{ snHits }}" as="h" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:90px 70px minmax(0,1fr) 80px;gap:10px;padding:10px 14px;border-bottom:1px solid #22242a;font:500 12.5px 'IBM Plex Mono',monospace;align-items:center">
+<span style="color:#ecebe6">{{ h.sn }}</span><span style="color:#c8f560">{{ h.src }}</span><span style="color:#9b9a94;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ h.file }}</span><span style="color:{{ h.c }};text-align:right">{{ h.status }}</span>
+</div>
+</sc-for>
+<sc-if value="{{ snEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:14px;font:500 12.5px 'IBM Plex Mono',monospace;color:#6c6b66">No matches in any source.</div></sc-if>
+</div>
+<span style="font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">Pass rate for this query: <span style="color:#c8f560">{{ snRate }}</span> · rework: {{ snRework }}</span>
+</div>
+</sc-if>
+
+<sc-if value="{{ is2 }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;font:500 13px 'IBM Plex Mono',monospace"><span style="padding:5px 10px;background:#1d1f23;border-radius:6px">⏱ {{ vifClock }}</span><span style="color:#9b9a94">job runs every 5 min (sped up) · CSV-injection guard on</span></div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
+<sc-for list="{{ vifShifts }}" as="s" hint-placeholder-count="3">
+<div style="background:#1d1f23;border:1px solid {{ s.bd }};border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;font:600 12px 'IBM Plex Mono',monospace"><span>{{ s.name }}</span><span style="color:#9b9a94">{{ s.hrs }}</span></div>
+<div style="display:flex;height:8px;border-radius:4px;overflow:hidden;background:#2a2c31"><div style="width:{{ s.pw }};background:#c8f560"></div><div style="width:{{ s.fw }};background:#ff7a59"></div></div>
+<div style="display:flex;justify-content:space-between;font:500 12px 'IBM Plex Mono',monospace"><span style="color:#c8f560">{{ s.p }} pass</span><span style="color:#ff7a59">{{ s.f }} fail</span></div>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">
+<sc-for list="{{ vifLog }}" as="l" hint-placeholder-count="4"><span>{{ l }}</span></sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is3 }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;font:500 13px 'IBM Plex Mono',monospace">
+<div style="display:flex;border:1px solid #3a3c42;border-radius:8px;overflow:hidden"><button onClick="{{ shift2 }}" style="cursor:pointer;border:0;padding:8px 14px;background:{{ s2bg }};color:{{ s2fg }}">2 shifts</button><button onClick="{{ shift3 }}" style="cursor:pointer;border:0;padding:8px 14px;background:{{ s3bg }};color:{{ s3fg }}">3 shifts</button></div>
+<label style="display:flex;align-items:center;gap:10px;color:#9b9a94">Demand forecast <input type="range" min="60" max="160" value="{{ capLoad }}" onChange="{{ setLoad }}" style="accent-color:#c8f560"></input> <span style="color:#ecebe6">{{ capLoad }}%</span></label>
+<span style="color:#9b9a94">over a 36-month horizon</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ capRows }}" as="r" hint-placeholder-count="10">
+<div style="display:grid;grid-template-columns:54px minmax(0,1fr) 54px;gap:10px;align-items:center;font:500 12px 'IBM Plex Mono',monospace">
+<span style="color:#9b9a94">{{ r.k }}</span>
+<div style="height:10px;background:#22242a;border-radius:3px;overflow:hidden"><div style="height:100%;width:{{ r.w }};background:{{ r.c }};transition:width .25s"></div></div>
+<span style="text-align:right;color:{{ r.c }}">{{ r.u }}</span>
+</div>
+</sc-for>
+</div>
+<span style="font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">{{ capOver }}</span>
+</div>
+</sc-if>
+
+<sc-if value="{{ is4 }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><button onClick="{{ toggleFix }}" style="cursor:pointer;border:1px solid {{ fixBd }};background:{{ fixBg }};color:{{ fixFg }};border-radius:8px;padding:9px 14px;font:600 13px 'IBM Plex Mono',monospace">{{ fixLabel }}</button><span style="font:500 12.5px 'IBM Plex Mono',monospace;color:#9b9a94">{{ miroSummary }}</span></div>
+<div style="border:1px solid #2a2c31;border-radius:9px;overflow:hidden">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 110px;gap:10px;padding:9px 14px;background:#1d1f23;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#6c6b66"><span>BOE LINE ID</span><span>SAP PO ID</span><span>DUTY ₹</span><span style="text-align:right">STATUS</span></div>
+<sc-for list="{{ miroRows }}" as="r" hint-placeholder-count="5">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 110px;gap:10px;padding:10px 14px;border-top:1px solid #22242a;font:500 12.5px 'IBM Plex Mono',monospace">
+<span>{{ r.boe }}</span><span style="color:#9b9a94">{{ r.sap }}</span><span style="color:#9b9a94">{{ r.duty }}</span><span style="text-align:right;color:{{ r.c }}">{{ r.s }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ is5 }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center"><button onClick="{{ addAudit }}" style-hover="background:#ddff7a" style="cursor:pointer;background:#c8f560;color:#0f1012;border:0;border-radius:8px;padding:9px 14px;font:700 13px Archivo,sans-serif">+ Log an audit on the phone</button><button onClick="{{ toggleWifi }}" style="cursor:pointer;border:1px solid #3a3c42;background:transparent;border-radius:8px;padding:9px 14px;font:600 13px 'IBM Plex Mono',monospace;color:{{ wifiC }}">{{ wifiLabel }}</button></div>
+<div style="display:grid;grid-template-columns:minmax(0,200px) 60px minmax(0,1fr);gap:12px;align-items:center">
+<div style="background:#1d1f23;border:2px solid #3a3c42;border-radius:22px;padding:14px 12px;min-height:180px;display:flex;flex-direction:column;gap:6px">
+<span style="font:600 11px 'IBM Plex Mono',monospace;color:#6c6b66;text-align:center">ANDROID · SQLite</span>
+<sc-for list="{{ phoneList }}" as="a" hint-placeholder-count="2"><span style="font:500 11.5px 'IBM Plex Mono',monospace;padding:6px 8px;background:#121316;border-radius:6px;color:{{ a.c }}">{{ a.t }}</span></sc-for>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px;font:500 11px 'IBM Plex Mono',monospace;color:{{ wifiC }}"><span style="font-size:18px">{{ wifiIcon }}</span><span>{{ queueLabel }}</span></div>
+<div style="background:#1d1f23;border:1px solid #3a3c42;border-radius:10px;padding:14px;min-height:180px;display:flex;flex-direction:column;gap:6px">
+<span style="font:600 11px 'IBM Plex Mono',monospace;color:#6c6b66">WINDOWS · ELECTRON · SQLite</span>
+<sc-for list="{{ pcList }}" as="a" hint-placeholder-count="2"><span style="font:500 12px 'IBM Plex Mono',monospace;padding:6px 8px;background:#121316;border-radius:6px">{{ a }}</span></sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+</div>
+</div>
+</div>
+</section>
+
+<section id="kalasphere" style="background:#f2f0e9;color:#141416;scroll-margin-top:60px">
+<div style="max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:40px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 60px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#4d6b12">02 · PROJECT · SOLO · IN PRODUCTION</span><h2 style="margin:0;font:400 clamp(52px,7.4vw,112px)/.9 'Instrument Serif',serif">KalaSphere<span style="font-style:italic;color:#4d6b12">-AI</span></h2></div>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#3c3b38;text-wrap:pretty">A multi-tenant ERP for cultural institutions, built on Supabase and PostgreSQL. It's one codebase, and every institution gets its own branding, users, events, venues, faculty, students and reports, separated from the others by role-based access. Switch tenant or role below to see how the product changes.</p>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+<div style="flex:1 1 280px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6b6a64">TENANT (DEMO)</span>
+<sc-for list="{{ tenants }}" as="t" hint-placeholder-count="3">
+<button onClick="{{ t.pick }}" style="cursor:pointer;text-align:left;display:flex;align-items:center;gap:12px;background:{{ t.bg }};border:1px solid {{ t.bd }};border-radius:10px;padding:12px 14px"><span style="width:28px;height:28px;border-radius:7px;background:{{ t.color }};color:#fff;display:grid;place-items:center;font:700 13px Archivo,sans-serif">{{ t.ini }}</span><span style="font:600 15px Archivo,sans-serif;color:#141416;white-space:nowrap">{{ t.name }}</span></button>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6b6a64">SIGNED IN AS</span>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ roles }}" as="r" hint-placeholder-count="4">
+<button onClick="{{ r.pick }}" style="cursor:pointer;border:1px solid {{ r.bd }};background:{{ r.bg }};color:{{ r.fg }};border-radius:999px;padding:8px 14px;font:600 13px Archivo,sans-serif">{{ r.name }}</button>
+</sc-for>
+</div>
+</div>
+<div style="background:#141416;color:#d9d8d2;border-radius:12px;padding:16px 18px;font:500 12.5px/1.7 'IBM Plex Mono',monospace;overflow-x:auto"><span style="color:#6c6b66">-- row-level policy, every table</span><br><span style="color:#c8f560">select</span> * <span style="color:#c8f560">from</span> events<br><span style="color:#c8f560">where</span> tenant_id = <span style="color:#ffb86b">'{{ ksTenantId }}'</span><br>  <span style="color:#c8f560">and</span> role_can(<span style="color:#ffb86b">'{{ ksRoleId }}'</span>, <span style="color:#ffb86b">'read'</span>);</div>
+</div>
+
+<div style="flex:3 1 560px;min-width:0;background:#fff;border:1px solid #d9d6cc;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px -30px rgba(20,20,22,.35)">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:{{ ksColor }};color:#fff;transition:background .3s">
+<div style="display:flex;align-items:center;gap:10px"><span style="width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.2);display:grid;place-items:center;font:800 13px Archivo,sans-serif">{{ ksIni }}</span><span style="font:700 16px Archivo,sans-serif">{{ ksName }}</span></div>
+<span style="font:500 12px 'IBM Plex Mono',monospace;background:rgba(0,0,0,.2);padding:4px 10px;border-radius:999px">{{ ksRole }}</span>
+</div>
+<div style="display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr);min-height:340px">
+<div style="border-right:1px solid #ebe8df;padding:12px;display:flex;flex-direction:column;gap:3px;background:#faf9f5">
+<sc-for list="{{ ksNav }}" as="m" hint-placeholder-count="8">
+<button onClick="{{ m.pick }}" style="cursor:{{ m.cur }};text-align:left;border:0;border-radius:7px;padding:9px 10px;font:500 13.5px Archivo,sans-serif;background:{{ m.bg }};color:{{ m.fg }};display:flex;justify-content:space-between;gap:6px"><span>{{ m.name }}</span><span style="font:500 11px 'IBM Plex Mono',monospace">{{ m.lock }}</span></button>
+</sc-for>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:{{ ksColor }}">MODULE</span>
+<h3 style="margin:0;font:800 28px/1.1 Archivo,sans-serif;letter-spacing:-.02em">{{ ksMod.name }}</h3>
+<p style="margin:0;font-size:15.5px;line-height:1.6;color:#4a4945;text-wrap:pretty">{{ ksMod.desc }}</p>
+<div style="margin-top:6px;display:flex;flex-direction:column;gap:8px">
+<span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#8a8880">WHAT {{ ksRoleUp }} CAN DO HERE</span>
+<span style="font-size:15px;line-height:1.55;color:#141416">{{ ksCan }}</span>
+</div>
+<div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;font:500 12px 'IBM Plex Mono',monospace;color:#6b6a64"><span>{{ ksAccess }}</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects" style="max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px) 80px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:60px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 60px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">03 · PROJECTS · 13 REPOS ON GITHUB</span><h2 style="margin:0;font:400 clamp(44px,6vw,84px)/.95 'Instrument Serif',serif">Things I've <span style="font-style:italic">shipped</span></h2></div>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#b9b8b1;text-wrap:pretty">Products I designed and built end to end: AI agents, multi-tenant SaaS and security-first systems. Pick one to see how it works and the engineering decisions behind it.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{ pFilters }}" as="f" hint-placeholder-count="5">
+<button onClick="{{ f.pick }}" style="cursor:pointer;white-space:nowrap;border:1px solid {{ f.bd }};background:{{ f.bg }};color:{{ f.fg }};border-radius:999px;padding:7px 14px;font:600 13px Archivo,sans-serif">{{ f.k }} <span style="font:500 11px 'IBM Plex Mono',monospace;opacity:.7">{{ f.n }}</span></button>
+</sc-for>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+<div style="flex:1 1 280px;max-width:100%;display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ projList }}" as="p" hint-placeholder-count="6">
+<button onClick="{{ p.pick }}" style="text-align:left;cursor:pointer;background:{{ p.bg }};border:1px solid {{ p.bd }};border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+<span style="display:flex;justify-content:space-between;gap:10px;align-items:baseline"><span style="font:700 16px/1.25 Archivo,sans-serif;color:#ecebe6">{{ p.name }}</span><span style="font:500 11px 'IBM Plex Mono',monospace;color:{{ p.nc }};white-space:nowrap">{{ p.status }}</span></span>
+<span style="font-size:13.5px;line-height:1.45;color:#9b9a94">{{ p.one }}</span>
+</button>
+</sc-for>
+<a href="https://github.com/govindprabhu03?tab=repositories" target="_blank" style="padding:14px 18px;border:1px dashed #3a3c42;border-radius:12px;font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">+ 7 more repositories on GitHub ↗</a>
+</div>
+<div style="flex:3 1 560px;min-width:0;background:#16171a;border:1px solid #2a2c31;border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
+<div style="padding:26px 28px;display:flex;flex-direction:column;gap:14px;border-bottom:1px solid #2a2c31">
+<span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#c8f560">{{ pj.kind }}</span>
+<h3 style="margin:0;font:800 clamp(28px,3.2vw,42px)/1.02 Archivo,sans-serif;letter-spacing:-.025em">{{ pj.name }}</h3>
+<p style="margin:0;font-size:16.5px;line-height:1.6;color:#d9d8d2;text-wrap:pretty;max-width:760px">{{ pj.desc }}</p>
+<sc-if value="{{ pjHasRole }}" hint-placeholder-val="{{ false }}"><span style="font:500 13px 'IBM Plex Mono',monospace;color:#ffc861">My role: {{ pj.role }}</span></sc-if>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+<sc-for list="{{ pjLinks }}" as="l" hint-placeholder-count="2">
+<a href="{{ l.href }}" target="_blank" style-hover="border-color:#c8f560" style="white-space:nowrap;border:1px solid #3a3c42;border-radius:8px;padding:8px 13px;font:600 13px 'IBM Plex Mono',monospace;color:{{ l.c }}">{{ l.t }}</a>
+</sc-for>
+</div>
+</div>
+<div style="padding:22px 28px;border-bottom:1px solid #2a2c31;background:#121316;display:flex;flex-direction:column;gap:12px">
+<span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6c6b66">HOW IT WORKS</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+<sc-for list="{{ pjSteps }}" as="s" hint-placeholder-count="5">
+<span style="display:flex;align-items:center;gap:8px"><span style="font:500 12.5px 'IBM Plex Mono',monospace;padding:7px 11px;border-radius:7px;border:1px solid {{ s.bd }};background:{{ s.bg }};color:{{ s.c }};transition:all .3s">{{ s.t }}</span><span style="color:#4a4c52;font:500 13px 'IBM Plex Mono',monospace">{{ s.arrow }}</span></span>
+</sc-for>
+</div>
+</div>
+<sc-if value="{{ pjHasEx }}" hint-placeholder-val="{{ false }}">
+<div style="padding:20px 28px;border-bottom:1px solid #2a2c31;display:flex;flex-direction:column;gap:10px">
+<span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6c6b66">EXAMPLE</span>
+<span style="font:500 13.5px/1.5 'IBM Plex Mono',monospace;color:#d9d8d2">“{{ pj.exIn }}”</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{ pjExOut }}" as="e" hint-placeholder-count="3">
+<span style="display:flex;border:1px solid #3d4a1e;border-radius:7px;overflow:hidden;font:500 12.5px 'IBM Plex Mono',monospace"><span style="padding:6px 10px;background:#1f2614;color:#c8f560">{{ e.k }}</span><span style="padding:6px 10px">{{ e.v }}</span></span>
+</sc-for>
+</div>
+</div>
+</sc-if>
+<div style="padding:24px 28px;display:flex;flex-direction:column;gap:14px;border-bottom:1px solid #2a2c31">
+<span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6c6b66">KEY ENGINEERING DECISIONS</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+<sc-for list="{{ pjDecisions }}" as="d" hint-placeholder-count="4">
+<div style="background:#1d1f23;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font:700 15px/1.3 Archivo,sans-serif;color:#ecebe6">{{ d.t }}</span><span style="font-size:14px;line-height:1.55;color:#9b9a94;text-wrap:pretty">{{ d.d }}</span></div>
+</sc-for>
+</div>
+</div>
+<div style="padding:18px 28px 24px;display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ pjStack }}" as="t" hint-placeholder-count="6"><span style="white-space:nowrap;font:500 12px 'IBM Plex Mono',monospace;padding:5px 9px;border:1px solid #2a2c31;border-radius:6px;color:#b9b8b1">{{ t }}</span></sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<section id="stack" style="max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px) 80px;display:flex;flex-direction:column;gap:36px;scroll-margin-top:60px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 60px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">04 · TECHNICAL SKILLS</span><h2 style="margin:0;font:400 clamp(44px,6vw,84px)/.95 'Instrument Serif',serif">The <span style="font-style:italic">stack</span>, wired up</h2></div>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#b9b8b1;text-wrap:pretty">Hover or tap any skill to see where I've used it in shipped work.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+<div style="flex:3 1 560px;min-width:0;display:flex;flex-direction:column;border:1px solid #2a2c31;border-radius:16px;overflow:hidden">
+<sc-for list="{{ skills }}" as="s" hint-placeholder-count="8">
+<div style="display:grid;grid-template-columns:minmax(130px,190px) minmax(0,1fr);border-bottom:1px solid #22242a">
+<span style="padding:16px 18px;border-right:1px solid #22242a;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#9b9a94;background:#131417">{{ s.k }}</span>
+<div style="padding:12px 16px;display:flex;flex-wrap:wrap;gap:7px">
+<sc-for list="{{ s.items }}" as="it" hint-placeholder-count="4">
+<button onMouseEnter="{{ it.hover }}" onClick="{{ it.hover }}" style="cursor:pointer;white-space:nowrap;font:500 13.5px Archivo,sans-serif;padding:6px 11px;border-radius:7px;border:1px solid {{ it.bd }};background:{{ it.bg }};color:{{ it.fg }}">{{ it.name }}</button>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="flex:1 1 280px;position:sticky;top:90px;background:#16171a;border:1px solid #2a2c31;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px">
+<span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6c6b66">SELECTED SKILL</span>
+<span style="font:800 28px/1.1 Archivo,sans-serif;letter-spacing:-.02em;color:#c8f560">{{ skillSel }}</span>
+<span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6c6b66;margin-top:6px">USED IN</span>
+<sc-for list="{{ skillUses }}" as="u" hint-placeholder-count="2">
+<a href="{{ u.href }}" onClick="{{ u.go }}" style="display:flex;justify-content:space-between;gap:10px;padding:10px 12px;background:#1d1f23;border-radius:8px;color:#ecebe6;font:500 14px Archivo,sans-serif"><span>{{ u.t }}</span><span style="color:#6c6b66">→</span></a>
+</sc-for>
+<sc-if value="{{ skillNone }}" hint-placeholder-val="{{ false }}"><span style="font-size:14px;line-height:1.5;color:#9b9a94">Part of my wider toolbox: coursework, leadership work and side builds.</span></sc-if>
+</div>
+</div>
+</section>
+
+<section id="about" style="max-width:1280px;margin:0 auto;padding:60px clamp(16px,4vw,40px) 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:40px;scroll-margin-top:60px">
+<div style="display:flex;flex-direction:column;gap:18px">
+<span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">05 · EDUCATION</span>
+<div style="border:1px solid #2a2c31;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:10px;background:#16171a">
+<h3 style="margin:0;font:400 clamp(30px,3.2vw,42px)/1.05 'Instrument Serif',serif">B.E., <span style="font-style:italic">Electronics &amp; Computer Engineering</span></h3>
+<span style="font-size:16px;color:#b9b8b1">Agnel Institute of Engineering and Design, Goa</span>
+<span style="font:500 13px 'IBM Plex Mono',monospace;color:#c8f560">Pursuing · expected 2027</span>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:18px">
+<span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">06 · LEADERSHIP &amp; ACTIVITIES</span>
+<div style="display:flex;flex-direction:column;border-left:2px solid #2a2c31;padding-left:22px;gap:22px">
+<sc-for list="{{ leadership }}" as="l" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:5px"><span style="font:500 11px 'IBM Plex Mono',monospace;color:#6c6b66">{{ l.when }}</span><span style="font:700 19px/1.25 Archivo,sans-serif">{{ l.t }}</span><span style="font-size:15px;line-height:1.55;color:#9b9a94;text-wrap:pretty">{{ l.d }}</span></div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="contact" style="border-top:1px solid #22242a;scroll-margin-top:60px">
+<div style="max-width:1280px;margin:0 auto;padding:100px clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:22px">
+<span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">07 · CONTACT</span>
+<h2 style="margin:0;font:400 clamp(48px,6.4vw,96px)/.92 'Instrument Serif',serif">Send me a <span style="font-style:italic;color:#c8f560">request.</span></h2>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#b9b8b1;max-width:460px">I'm looking for full-stack roles from 2027 and happy to talk sooner. Fill in the request; it opens in your email app.</p>
+<div style="display:flex;flex-direction:column;gap:8px;font:500 14px 'IBM Plex Mono',monospace"><a href="mailto:prabhugovind0302@gmail.com">prabhugovind0302@gmail.com</a><a href="tel:+918830700683" style="color:#ecebe6">+91 88307 00683</a><a href="https://github.com/govindprabhu03" target="_blank" style="color:#ecebe6">github.com/govindprabhu03 ↗</a><a href="https://linkedin.com/in/govind-prabhu-46b005330" target="_blank" style="color:#ecebe6">linkedin.com/in/govind-prabhu ↗</a></div>
+</div>
+<div style="background:#16171a;border:1px solid #2a2c31;border-radius:16px;overflow:hidden">
+<div style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid #2a2c31;font:600 12.5px 'IBM Plex Mono',monospace"><span style="background:#c8f560;color:#0f1012;padding:3px 8px;border-radius:5px">POST</span><span style="color:#9b9a94">/api/hire/govind</span></div>
+<div style="padding:18px;display:flex;flex-direction:column;gap:10px">
+<input value="{{ cName }}" onChange="{{ setName }}" placeholder="Your name" style="background:#1d1f23;border:1px solid #2a2c31;border-radius:8px;padding:11px 13px;outline:none;font-size:15px"></input>
+<input value="{{ cCo }}" onChange="{{ setCo }}" placeholder="Company" style="background:#1d1f23;border:1px solid #2a2c31;border-radius:8px;padding:11px 13px;outline:none;font-size:15px"></input>
+<textarea value="{{ cMsg }}" onChange="{{ setMsg }}" placeholder="What are you building?" rows="3" style="background:#1d1f23;border:1px solid #2a2c31;border-radius:8px;padding:11px 13px;outline:none;font-size:15px;resize:vertical"></textarea>
+<pre style="margin:0;background:#0f1012;border:1px solid #22242a;border-radius:8px;padding:12px 14px;font:500 12.5px/1.6 'IBM Plex Mono',monospace;color:#b9b8b1;white-space:pre-wrap;word-break:break-word">{{ cJson }}</pre>
+<button onClick="{{ send }}" style-hover="background:#ddff7a" style="cursor:pointer;background:#c8f560;color:#0f1012;border:0;border-radius:9px;padding:13px;font:700 15px Archivo,sans-serif">Send request →</button>
+</div>
+</div>
+</div>
+<footer style="max-width:1280px;margin:0 auto;padding:22px clamp(16px,4vw,40px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #22242a;font:500 12px 'IBM Plex Mono',monospace;color:#6c6b66"><span>© 2026 Govind Prabhu</span><span>Designed &amp; built by me · Goa</span></footer>
+</section>
+
+<sc-if value="{{ palOpen }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ closePalette }}" style="position:fixed;inset:0;z-index:50;background:rgba(5,5,6,.6);backdrop-filter:blur(4px);display:flex;justify-content:center;padding-top:14vh">
+<div onClick="{{ stop }}" style="width:min(560px,92vw);align-self:flex-start;background:#16171a;border:1px solid #3a3c42;border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)">
+<input ref="{{ palRef }}" value="{{ palQ }}" onChange="{{ setPalQ }}" onKeyDown="{{ palKey }}" placeholder="Type a section or action…" style="width:100%;box-sizing:border-box;background:transparent;border:0;border-bottom:1px solid #2a2c31;padding:16px 18px;font-size:16px;outline:none"></input>
+<div style="display:flex;flex-direction:column;padding:6px">
+<sc-for list="{{ palItems }}" as="p" hint-placeholder-count="5">
+<button onClick="{{ p.run }}" style-hover="background:#1d1f23" style="cursor:pointer;text-align:left;border:0;background:transparent;border-radius:8px;padding:11px 12px;display:flex;justify-content:space-between;font:500 14.5px Archivo,sans-serif"><span>{{ p.t }}</span><span style="font:500 11px 'IBM Plex Mono',monospace;color:#6c6b66">{{ p.k }}</span></button>
+</sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const TOOLS = [
+  { no: '01', title: 'Creditors RFC Builder', area: 'FINANCE', stack: 'Python · pandas · Flask · PyInstaller', demoHint: 'press run',
+    before: 'Every month a finance report was put together by hand in Excel, with VLOOKUPs across 14,000+ SAP creditor and GR/IR rows.',
+    built: 'A pandas pipeline that turns the raw SAP exports into the finished report, shipped as a desktop .exe, a Flask web app and a CLI.',
+    result: "The row count matched the manual report within 0.7%, so the monthly VLOOKUP work went away." },
+  { no: '02', title: 'Serial Number Search System', area: 'QUALITY · PRODUCTION', stack: 'Python · Flask · SQLite · SQL Server', demoHint: 'type to search',
+    before: 'A serial number’s history was spread across CSV, Excel, Access, .sql dumps, password-protected zips and live SQL Server tables.',
+    built: 'One search that looks through every source at once, including protected archives and live SQL Server tables.',
+    result: 'Any serial number found in a single search, with pass-rate and rework analysis built in.' },
+  { no: '03', title: 'VIF Test-File Processor', area: 'QUALITY', stack: 'Python · Windows Task Scheduler', demoHint: 'running live',
+    before: 'Raw test-station files had to be turned into pass/fail reports by hand.',
+    built: 'An unattended processor scheduled every 5 minutes, with CSV-injection protection on everything it writes.',
+    result: 'Pass/fail reports for every product and shift, kept up to date automatically.' },
+  { no: '04', title: 'Capacity Utilization Calculator', area: 'PRODUCTION', stack: 'Python', demoHint: 'change shifts & demand',
+    before: 'Capacity planning lived in a manual Excel workbook.',
+    built: 'A calculator that compares demand with available hours across 10 work centres, for 2- or 3-shift patterns.',
+    result: 'A 36-month planning view that recalculates instantly instead of being rebuilt by hand.' },
+  { no: '05', title: 'MIRO Duty Verification', area: 'FINANCE · CUSTOMS', stack: 'JavaScript · SheetJS · Python', demoHint: 'toggle the fix',
+    before: 'An old Excel VBA macro checked customs Bill of Entry lines against SAP.',
+    built: 'A browser tool that matches each Bill of Entry line to SAP purchase orders and invoices, then outputs a SAP-ready MIRO upload file.',
+    result: 'Found and fixed an ID zero-padding mismatch that had been quietly leaving real data unchecked.' },
+  { no: '06', title: 'QA Audit Native App', area: 'QUALITY', stack: 'React Native · Expo · Electron · SQLite', demoHint: 'go offline, then sync',
+    before: 'Quality audits ran on a PHP/MySQL check-sheet web app.',
+    built: 'An offline Android app and a Windows desktop app, both storing data on-device in SQLite.',
+    result: 'Audits work without a network, and phone and PC sync over Wi-Fi.' }
+];
+const SN = [
+  { sn: 'SN40217', src: 'CSV', file: 'line3_jan.csv', status: 'PASS' }, { sn: 'SN40217', src: 'SQL', file: 'dbo.TestResults (live)', status: 'REWORK' },
+  { sn: 'SN40218', src: 'XLSX', file: 'final_inspection_q1.xlsx', status: 'PASS' }, { sn: 'SN40219', src: 'ZIP', file: 'archive_2024.zip 🔒', status: 'PASS' },
+  { sn: 'SN40219', src: 'MDB', file: 'legacy_trace.mdb', status: 'FAIL' }, { sn: 'SN51002', src: '.sql', file: 'dump_feb.sql', status: 'PASS' },
+  { sn: 'SN51003', src: 'XLSX', file: 'rework_log.xlsx', status: 'REWORK' }, { sn: 'SN51007', src: 'CSV', file: 'station2.csv', status: 'PASS' }
+];
+const WC = [310, 280, 420, 360, 250, 390, 300, 450, 270, 330];
+const MIRO = [{ boe: '451', sap: '000451', duty: '18,200' }, { boe: '1287', sap: '001287', duty: '9,450' }, { boe: '98', sap: '000098', duty: '3,120' }, { boe: '30442', sap: '030442', duty: '12,400', bad: '12,040' }, { boe: '7765', sap: '007765', duty: '6,780' }];
+const TENANTS = [{ name: 'Natya Academy', ini: 'NA', color: '#7a2e8c', id: 'natya' }, { name: 'Sur School of Music', ini: 'SM', color: '#1f5fa8', id: 'sur' }, { name: 'Rang Arts Centre', ini: 'RA', color: '#b44a1c', id: 'rang' }];
+const ROLES = ['Admin', 'Faculty', 'Student', 'Parent'];
+const MODS = [
+  { name: 'Events & workshops', desc: 'Plan, publish and run the institution’s events and workshops.', can: { Admin: 'Create, edit and publish events; see registrations.', Faculty: 'Propose workshops and manage the ones they run.', Student: 'Browse and register for events.', Parent: 'See events their child is registered for.' } },
+  { name: 'Class enrollment', desc: 'Students enrol into classes; faculty get live rosters.', can: { Admin: 'Open classes, set capacity, approve enrolments.', Faculty: 'View and manage their class rosters.', Student: 'Enrol into open classes.' } },
+  { name: 'Student evaluation', desc: 'Structured assessment of each student on 9 criteria.', can: { Admin: 'Configure the 9 criteria and view all reports.', Faculty: 'Score students on all 9 criteria.', Parent: 'View their child’s evaluation (read-only).' } },
+  { name: 'Parent portal', desc: 'A dedicated view for parents to follow their child.', can: { Admin: 'Manage parent accounts and links to students.', Parent: 'Follow classes, events and progress.' } },
+  { name: 'Venue booking', desc: 'Book halls and rooms against a live calendar.', can: { Admin: 'Manage venues and approve bookings.', Faculty: 'Book venues for classes and events.' } },
+  { name: 'Canteen ordering', desc: 'Order from the institution’s canteen inside the app.', can: { Admin: 'Manage the menu and orders.', Student: 'Place canteen orders.', Parent: 'Order for their child.' } },
+  { name: 'AI assistant', desc: 'An assistant built into the ERP, scoped to the current tenant.', can: { Admin: 'Ask across the institution’s data.', Faculty: 'Ask about their classes and students.', Student: 'Ask about their schedule and classes.' } },
+  { name: 'Branding & roles', desc: 'Per-tenant branding and role-based access control across every module.', can: { Admin: 'Set the tenant’s branding and assign roles.' } }
+];
+const SKILLS = [
+  { k: 'Languages', items: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'] },
+  { k: 'Frontend & Mobile', items: ['React', 'Next.js', 'Tailwind', 'Three.js', 'React Native', 'Expo', 'Electron', 'Bootstrap', 'Mobile-first UI'] },
+  { k: 'Backend', items: ['Node.js', 'Express.js', 'Flask', 'FastAPI', 'REST APIs', 'Socket.io'] },
+  { k: 'Databases', items: ['PostgreSQL', 'SQLite', 'MongoDB', 'SQL Server', 'Supabase'] },
+  { k: 'Data & Automation', items: ['pandas', 'openpyxl', 'SheetJS', 'PyInstaller', 'Task Scheduler', 'Excel VBA'] },
+  { k: 'Enterprise & IoT', items: ['SAP', 'Mendix', 'Power Apps', 'Arduino', 'ESP32'] },
+  { k: 'AI & ML', items: ['Claude API', 'Gemini', 'BLIP / VQA', 'Faster R-CNN', 'Whisper', 'Tesseract.js'] },
+  { k: 'Security & Arch.', items: ['OAuth', 'RBAC', 'Row-level security', 'E2E encryption', 'Multi-tenant SaaS', 'Offline-first'] },
+  { k: 'Tools', items: ['Git', 'GitHub', 'Vercel'] }
+];
+const USES = { Python: [0, 1, 2, 3, 4], JavaScript: [4], SQL: [1, 6], React: [5], 'React Native': [5], Expo: [5], Electron: [5], Flask: [0, 1], PostgreSQL: [6], SQLite: [1, 5], 'SQL Server': [1], Supabase: [6], pandas: [0], SheetJS: [4], PyInstaller: [0], 'Task Scheduler': [2], 'Excel VBA': [4], SAP: [0, 4], RBAC: [6], 'Multi-tenant SaaS': [6], 'Offline-first': [5], 'Mobile-first UI': [5, 6] };
+const PUSE = { Supabase: [10, 11, 14], PostgreSQL: [10, 13, 14], React: [10, 11, 13], TypeScript: [10, 11], Python: [12, 13, 15], JavaScript: [14, 15], Flask: [15], OAuth: [10, 14], RBAC: [10], 'Multi-tenant SaaS': [10], 'Next.js': [10], Tailwind: [10, 11, 13], 'Three.js': [11, 15], FastAPI: [11, 12, 13], SQLite: [12], Vercel: [10], 'Claude API': [12], Gemini: [10], 'BLIP / VQA': [13], 'Faster R-CNN': [13], Whisper: [11], 'Tesseract.js': [14], 'Row-level security': [10, 11, 14], 'E2E encryption': [11] };
+Object.keys(PUSE).forEach(k => { USES[k] = (USES[k] || []).concat(PUSE[k]); });
+const PROJECTS = [
+  { name: 'Smart Inventory', status: '● LIVE', tags: ['AI', 'Full-stack', 'Security'], kind: 'AI-POWERED · MULTI-TENANT SAAS', one: 'Inventory for small businesses, with an AI assistant and demand forecasting.',
+    desc: 'Real-time stock across warehouses, purchase and sales orders with approval workflows, demand forecasting and an AI assistant that can only use safe, approved tools. Designed so the database enforces the rules, not the app.',
+    live: 'https://smartinventorysystem-rho.vercel.app', repo: 'https://github.com/govindprabhu03/AI-Powered-Inventory-Management-System',
+    steps: ['Next.js App Router', 'Server Actions', 'Postgres + RLS', 'Triggers → ledger, audit, alerts', 'Realtime', 'Gemini tool calls'],
+    decisions: [{ t: 'Stock is an append-only ledger', d: 'Every change is a row in stock_movements; a trigger keeps stock levels in the same transaction, so stock can never go negative and concurrent orders never lose updates.' },
+      { t: 'Multi-tenancy lives in Postgres', d: 'Every table has an org_id and row-level security. Isolation is checked by attack scripts that try to read another org’s data.' },
+      { t: 'Orders are state machines', d: 'Order tables are select-only; every status change goes through a SECURITY DEFINER function that checks the role and current state.' },
+      { t: 'The AI never writes SQL', d: 'Gemini calls a fixed set of parameterised, RLS-scoped tools. The forecast is calculated with statistics, and the AI only explains the numbers.' }],
+    stack: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind v4', 'shadcn/ui', 'Zod', 'Recharts', 'Supabase', 'PostgreSQL', 'Gemini', 'Vercel'] },
+  { name: 'AeroTrans AI', status: 'PROTOTYPE', tags: ['AI', 'Security'], kind: 'REAL-TIME · AVIATION NLP · E2E ENCRYPTED', one: 'A multilingual assistant for pilot–ATC radio, with a 3D cockpit dashboard.',
+    desc: 'Takes an ATC transmission (typed, spoken or transcribed) and works out what it means: callsign, commands, altitude, heading, runway. It then translates it into the pilot’s language without breaking aviation phrasing, scores its confidence and flags anything ambiguous. Research prototype; the original transmission is always kept so a person can check it.',
+    repo: 'https://github.com/govindprabhu03/AeroTrans-AI',
+    steps: ['Speech / text', 'ASR (Web Speech · Whisper)', 'Aviation NLP', 'Entity extraction', 'Aviation-aware translation', 'Confidence & ambiguity', '3D cockpit HUD'],
+    exIn: 'Ural 452, descend to flight level two four zero and turn left heading two seven zero.', exOut: [{ k: 'CALLSIGN', v: 'URAL 452' }, { k: 'DESCEND', v: 'FL 240' }, { k: 'TURN', v: 'LEFT · HDG 270°' }],
+    decisions: [{ t: 'End-to-end encrypted pilot↔ATC channel', d: 'ECDH P-256 → HKDF → AES-256-GCM, done in the browser. The backend only passes along encrypted messages and never holds a key.' },
+      { t: 'Protection against interception', d: 'Each side gets a short SHA-256 key fingerprint that people can compare in person, plus a fresh nonce for every message.' },
+      { t: '8 languages + language packs', d: 'ICAO phrasing and number-by-number readout with spoken playback. You can download a language pack as JSON, edit it and upload it to add a new language.' },
+      { t: 'Hardened by default', d: 'Rate limit of 60 requests a minute, strict CSP and CORS, size-limited uploads, and nothing stored unless you turn storage on.' }],
+    stack: ['React', 'TypeScript', 'Three.js', 'Web Crypto API', 'FastAPI', 'WebSockets', 'Pydantic', 'faster-whisper', 'Supabase'] },
+  { name: 'ATLAS', status: '● LIVE', tags: ['AI', 'Full-stack'], kind: 'AGENTIC AI · PERSONAL MANAGER', one: 'Tell it what’s on your mind; it plans, schedules and follows up.',
+    desc: 'An agentic personal manager. Describe things in plain language and it picks out goals, tasks, commitments and events, breaks big goals into steps, fits the work into your free time and gives you a daily brief that flags commitments you’ve let slip. Works by voice, web and Telegram.',
+    live: 'https://atlas-ai-personal-assistant.onrender.com', repo: 'https://github.com/govindprabhu03/ATLAS-AI-Personal-Assistant',
+    steps: ['Natural language', 'Extract goal · task · event', 'Decompose goals', 'Schedule (earliest deadline)', 'Daily brief + follow-ups'],
+    decisions: [{ t: 'A Claude-powered agent that uses tools', d: 'One agent loop captures items, creates real Google Calendar events, scans Gmail, researches the web and drafts replies.' },
+      { t: 'Guardrails by permission tier', d: 'Anything that leaves the app (calendar, email, purchases) is shown as an Approve / Cancel card first. It drafts emails but never sends them, and never pays for anything.' },
+      { t: 'One brain, many channels', d: 'The web dashboard, hands-free voice and a Telegram bot share the same agent and the same database.' },
+      { t: 'Ships like a product', d: 'Installs on your phone as an app, deploys to Render from a blueprint file, and sends proactive reminders by notification and voice.' }],
+    stack: ['Python', 'FastAPI', 'SQLite', 'Claude API', 'Google Calendar API', 'Gmail API', 'Telegram Bot', 'Web Speech', 'PWA', 'Render'] },
+  { name: 'SatQuery AI', status: 'HACKATHON', tags: ['AI', 'Hackathon'], kind: 'SMART INDIA HACKATHON · COMPUTER VISION', one: 'Ask questions about satellite images and get answers with visual evidence.',
+    desc: 'A chat assistant for satellite and aerial images. It can describe an image, answer questions, count and locate objects with bounding boxes, and compare two images of the same area from different dates to show what changed.',
+    role: 'dataset, model training, evaluation and deployment (team of 6)', repo: 'https://github.com/govindprabhu03/SATQuery-AI',
+    steps: ['React upload + chat', 'FastAPI', 'Query router', 'Caption · VQA · Detect · Change', 'PostgreSQL history'],
+    decisions: [{ t: 'Routes each question to the right model', d: 'A query router sends each question to captioning (BLIP), VQA (BLIP-VQA), detection (CNN / Faster R-CNN / OWL-ViT) or change detection.' },
+      { t: 'Shows evidence with the answer', d: 'Answers to counting and locating questions come with bounding boxes drawn on the image.' },
+      { t: 'A real database layer', d: 'Images, every question and answer, and every before/after comparison are saved in Postgres, so query history is real.' },
+      { t: 'Repeatable training', d: 'GPU training notebooks for all four models on Colab and Kaggle, with checkpoints saved to Google Drive.' }],
+    stack: ['React', 'Vite', 'Tailwind', 'FastAPI', 'BLIP', 'Faster R-CNN', 'OWL-ViT', 'PostgreSQL', 'SQLAlchemy', 'Colab'] },
+  { name: 'SmartBill', status: '● LIVE', tags: ['Full-stack', 'AI'], kind: 'RECEIPTS · OCR · INSIGHTS', one: 'Snap a receipt; it’s read, categorised and analysed for you.',
+    desc: 'Upload a receipt and OCR picks out the store, date, amount, tax and items. It sorts the expense into a category automatically and saves it. An Insights tab shows monthly spending by category and flags unusual spending.',
+    live: 'https://smartbill-qh48.onrender.com', repo: 'https://github.com/govindprabhu03/SmartBill',
+    steps: ['Upload receipt', 'OCR in browser', 'Extract fields', 'Auto-categorise', 'Supabase + RLS', 'Spend insights'],
+    decisions: [{ t: 'Private OCR', d: 'Tesseract.js runs entirely in the browser, so receipts are never sent to a third party.' },
+      { t: 'Unusual-spend rule', d: 'A category is flagged when this month’s total is more than 1.2× its average over the previous 3 months.' },
+      { t: 'Zero-build app', d: 'A single index.html on Supabase, with email, Google and phone sign-in, and row-level security on every row.' }],
+    stack: ['JavaScript', 'Tesseract.js', 'Supabase', 'PostgreSQL', 'RLS', 'OAuth'] },
+  { name: 'QuakeAware', status: 'WEB APP', tags: ['Full-stack'], kind: '3D WEB · RISK PROFILING', one: 'Turns any address into a personal earthquake risk profile.',
+    desc: 'A futuristic 3D web app that takes an address and builds a personal earthquake risk profile: a risk score, nearby faults, recent earthquakes and a preparedness checklist.',
+    repo: 'https://github.com/govindprabhu03/QuakeAware',
+    steps: ['Enter address', 'Geocode', 'Faults + recent quakes', 'Risk score', 'Preparedness checklist'],
+    decisions: [{ t: 'One input, a full profile', d: 'An address is the only thing the user types; everything else is worked out and shown together.' },
+      { t: '3D first', d: 'Built on Three.js so the risk data is shown in space, not just in a table.' }],
+    stack: ['Python', 'Flask', 'JavaScript', 'Three.js'] }
+];
+const pad = n => String(n).padStart(2, '0');
+class Component extends DCLogic {
+  state = { tool: 0, rfcN: 0, rfcRun: false, sn: '402', vifT: 0, vif: [{ p: 0, f: 0 }, { p: 0, f: 0 }, { p: 0, f: 0 }], vifLog: [], shifts: 2, load: 100, fix: false, online: true, phone: [], pc: [], queue: 0, auditN: 0, ten: 0, role: 0, mod: 0, skill: 'Python', proj: 0, pf: 'All', cName: '', cCo: '', cMsg: '', pal: false, palQ: '' };
+  palRef = React.createRef();
+  componentDidMount() {
+    this.vifTimer = setInterval(() => this.setState(s => {
+      const t = s.vifT + 1, mins = 360 + t * 5, h = Math.floor(mins / 60) % 24, sh = h >= 6 && h < 14 ? 0 : h >= 14 && h < 22 ? 1 : 2;
+      const p = 3 + Math.floor(Math.random() * 6), f = Math.random() < .35 ? 1 + Math.floor(Math.random() * 2) : 0;
+      const vif = s.vif.map((x, i) => i === sh ? { p: x.p + p, f: x.f + f } : x);
+      const line = `${pad(h)}:${pad(mins % 60)}  processed ${p + f} files → ${p} pass, ${f} fail`;
+      return { vifT: t, vif, vifLog: [line, ...s.vifLog].slice(0, 4) };
+    }), 1400);
+    this.onKey = e => { if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); this.setState(s => ({ pal: !s.pal, palQ: '' })); } else if (e.key === 'Escape') this.setState({ pal: false }); };
+    addEventListener('keydown', this.onKey);
+  }
+  componentDidUpdate(_, ps) { if (this.state.pal && !ps.pal) setTimeout(() => this.palRef.current && this.palRef.current.focus(), 20); }
+  componentWillUnmount() { clearInterval(this.vifTimer); clearInterval(this.rfcTimer); removeEventListener('keydown', this.onKey); }
+  go(id) { this.setState({ pal: false }); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 60, behavior: 'smooth' }); }
+  renderVals() {
+    const s = this.state, A = '#c8f560';
+    const cur = TOOLS[s.tool];
+    const tools = TOOLS.map((t, i) => { const a = i === s.tool; return { ...t, bg: a ? '#1d1f23' : 'transparent', bd: a ? A : '#2a2c31', nc: a ? A : '#6c6b66', pick: () => this.setState({ tool: i }) }; });
+    const TOTAL = 14231, rp = s.rfcN / TOTAL;
+    const runRfc = () => { if (s.rfcRun) return; clearInterval(this.rfcTimer); this.setState({ rfcN: 0, rfcRun: true }); this.rfcTimer = setInterval(() => this.setState(x => { const n = Math.min(TOTAL, x.rfcN + 311); if (n >= TOTAL) clearInterval(this.rfcTimer); return { rfcN: n, rfcRun: n < TOTAL }; }), 30); };
+    const stepNames = ['Load SAP creditor export', 'Load GR/IR export', 'Join & reconcile', 'Write RFC report'];
+    const rfcSteps = stepNames.map((t, i) => { const done = rp >= (i + 1) / 4, act = !done && rp > i / 4; return { t, mark: done ? '✓' : act ? '◐' : '○', c: done ? A : act ? '#ecebe6' : '#6c6b66', bd: done ? '#3d4a1e' : '#2a2c31' }; });
+    const q = s.sn.trim().toUpperCase(), hits = q ? SN.filter(r => r.sn.includes(q)) : SN;
+    const srcs = ['CSV', 'XLSX', 'MDB', '.sql', 'ZIP', 'SQL'].map(k => { const n = hits.filter(h => h.src === k).length; return { k: k === 'SQL' ? 'SQL Server' : k, n, c: n ? A : '#6c6b66', bd: n ? '#3d4a1e' : '#2a2c31' }; });
+    const pass = hits.filter(h => h.status === 'PASS').length;
+    const mins = 360 + s.vifT * 5;
+    const avail = s.shifts * 8 * 26;
+    const capRows = WC.map((d, i) => { const u = d * s.load / 100 / avail * 100; return { k: 'WC-' + pad(i + 1), u: Math.round(u) + '%', w: Math.min(100, u) + '%', c: u > 100 ? '#ff7a59' : u > 85 ? '#ffc861' : A }; });
+    const over = capRows.filter(r => parseInt(r.u) > 100).length;
+    const miroRows = MIRO.map(r => { const idOk = s.fix || r.boe === r.sap; const ok = idOk && !r.bad; return { boe: r.boe, sap: r.sap, duty: r.bad ? r.duty + ' / ' + r.bad : r.duty, s: !idOk ? 'UNMATCHED' : ok ? 'VERIFIED' : 'DUTY Δ', c: !idOk ? '#6c6b66' : ok ? A : '#ff7a59' }; });
+    const ver = miroRows.filter(r => r.s === 'VERIFIED').length;
+    const T = TENANTS[s.ten], R = ROLES[s.role];
+    const allowed = MODS.map((m, i) => m.can[R] ? i : -1).filter(i => i >= 0);
+    const modIdx = allowed.includes(s.mod) ? s.mod : allowed[0], M = MODS[modIdx];
+    const uses = USES[s.skill] || [];
+    const allPal = [['Siemens Lab', 'lab'], ['KalaSphere-AI', 'kalasphere'], ['Projects', 'projects'], ['Stack', 'stack'], ['Education & leadership', 'about'], ['Contact', 'contact']].map(([t, id]) => ({ t, k: 'section', run: () => this.go(id) }))
+      .concat([{ t: 'Email Govind', k: 'action', run: () => { location.href = 'mailto:prabhugovind0302@gmail.com'; } }, { t: 'Open GitHub', k: 'link', run: () => window.open('https://github.com/govindprabhu03') }, { t: 'Open LinkedIn', k: 'link', run: () => window.open('https://linkedin.com/in/govind-prabhu-46b005330') }])
+      .concat(TOOLS.map((t, i) => ({ t: t.title, k: 'tool', run: () => { this.setState({ tool: i }); this.go('lab'); } })))
+      .concat(PROJECTS.map((p, i) => ({ t: p.name, k: 'project', run: () => { this.setState({ proj: i, pf: 'All' }); this.go('projects'); } })));
+    const palItems = allPal.filter(p => p.t.toLowerCase().includes(s.palQ.toLowerCase())).slice(0, 8);
+    const json = JSON.stringify({ from: s.cName || 'Recruiter', company: s.cCo || '—', role: 'Full-Stack Developer', message: s.cMsg || '…' }, null, 2);
+    const FL = ['All', 'AI', 'Full-stack', 'Security', 'Hackathon'];
+    const vis = PROJECTS.map((p, i) => i).filter(i => s.pf === 'All' || PROJECTS[i].tags.includes(s.pf));
+    const pi = vis.includes(s.proj) ? s.proj : vis[0], P = PROJECTS[pi], step = s.vifT % P.steps.length;
+    return {
+      pFilters: FL.map(k => { const a = k === s.pf; return { k, n: k === 'All' ? PROJECTS.length : PROJECTS.filter(p => p.tags.includes(k)).length, bg: a ? A : 'transparent', fg: a ? '#0f1012' : '#ecebe6', bd: a ? A : '#3a3c42', pick: () => this.setState({ pf: k }) }; }),
+      projList: vis.map(i => { const p = PROJECTS[i], a = i === pi; return { name: p.name, one: p.one, status: p.status, nc: p.status.includes('LIVE') ? A : '#6c6b66', bg: a ? '#1d1f23' : 'transparent', bd: a ? A : '#2a2c31', pick: () => this.setState({ proj: i }) }; }),
+      pj: P, pjHasRole: !!P.role, pjHasEx: !!P.exIn, pjExOut: P.exOut || [], pjDecisions: P.decisions, pjStack: P.stack,
+      pjLinks: [P.live && { t: '● Live demo ↗', href: P.live, c: A }, { t: 'Source on GitHub ↗', href: P.repo, c: '#ecebe6' }].filter(Boolean),
+      pjSteps: P.steps.map((t, i) => ({ t, arrow: i < P.steps.length - 1 ? '→' : '', bg: i === step ? '#1f2614' : 'transparent', bd: i === step ? A : '#2a2c31', c: i === step ? A : '#b9b8b1' })),
+      layers: [{ k: 'CLIENT', v: 'React · React Native · Electron', link: true }, { k: 'API', v: 'Node + Express · Flask · Socket.io', link: true }, { k: 'DATA', v: 'PostgreSQL · Supabase · SQLite · SQL Server', link: true }, { k: 'AUTOMATION', v: 'pandas · SheetJS · schedulers · SAP', link: false }],
+      openPalette: () => this.setState({ pal: true, palQ: '' }), closePalette: () => this.setState({ pal: false }), stop: e => e.stopPropagation(),
+      palOpen: s.pal, palQ: s.palQ, palRef: this.palRef, palItems, setPalQ: e => this.setState({ palQ: e.target.value }), palKey: e => { if (e.key === 'Enter' && palItems[0]) palItems[0].run(); },
+      tools, cur, is0: s.tool === 0, is1: s.tool === 1, is2: s.tool === 2, is3: s.tool === 3, is4: s.tool === 4, is5: s.tool === 5,
+      runRfc, rfcBtn: s.rfcRun ? 'Running…' : s.rfcN ? '↻ Run again' : '▶ Run pipeline', rfcRows: s.rfcN.toLocaleString('en-IN'), rfcPct: rp * 100 + '%', rfcSteps, rfcDone: s.rfcN >= TOTAL,
+      snQuery: s.sn, setSn: e => this.setState({ sn: e.target.value }), snSources: srcs,
+      snHits: hits.map(h => ({ ...h, c: h.status === 'PASS' ? A : h.status === 'FAIL' ? '#ff7a59' : '#ffc861' })), snEmpty: hits.length === 0,
+      snRate: hits.length ? Math.round(pass / hits.length * 100) + '%' : '—', snRework: hits.filter(h => h.status === 'REWORK').length,
+      vifClock: pad(Math.floor(mins / 60) % 24) + ':' + pad(mins % 60), vifLog: s.vifLog.length ? s.vifLog : ['waiting for first run…'],
+      vifShifts: s.vif.map((x, i) => { const t = x.p + x.f || 1; return { name: 'Shift ' + 'ABC'[i], hrs: ['06–14', '14–22', '22–06'][i], p: x.p, f: x.f, pw: x.p / t * 100 + '%', fw: x.f / t * 100 + '%', bd: '#2a2c31' }; }),
+      shift2: () => this.setState({ shifts: 2 }), shift3: () => this.setState({ shifts: 3 }),
+      s2bg: s.shifts === 2 ? A : 'transparent', s2fg: s.shifts === 2 ? '#0f1012' : '#ecebe6', s3bg: s.shifts === 3 ? A : 'transparent', s3fg: s.shifts === 3 ? '#0f1012' : '#ecebe6',
+      capLoad: s.load, setLoad: e => this.setState({ load: +e.target.value }), capRows,
+      capOver: over ? `${over} work centre${over > 1 ? 's' : ''} over capacity, so add a shift or move demand.` : `All 10 work centres within capacity · ${avail} available hrs/month each.`,
+      toggleFix: () => this.setState({ fix: !s.fix }), fixLabel: s.fix ? '✓ Zero-padding fix ON' : '✗ Legacy macro (no padding fix)',
+      fixBd: s.fix ? A : '#ff7a59', fixBg: s.fix ? '#1f2614' : '#2a1712', fixFg: s.fix ? A : '#ff7a59', miroRows,
+      miroSummary: s.fix ? `${ver}/5 verified · 1 real duty mismatch caught · MIRO_upload.xlsx ready` : `0/5 matched: "451" ≠ "000451", so lines go unchecked`,
+      addAudit: () => this.setState(x => { const n = x.auditN + 1, t = 'Audit #' + pad(n); return x.online ? { auditN: n, phone: [{ t: t + ' ✓', c: '#ecebe6' }, ...x.phone].slice(0, 5), pc: [t, ...x.pc].slice(0, 5) } : { auditN: n, phone: [{ t: t + ' · queued', c: '#ffc861' }, ...x.phone].slice(0, 5), queue: x.queue + 1 }; }),
+      toggleWifi: () => this.setState(x => x.online ? { online: false } : { online: true, queue: 0, phone: x.phone.map(p => ({ t: p.t.replace(' · queued', ' ✓'), c: '#ecebe6' })), pc: [...x.phone.filter(p => p.t.includes('queued')).map(p => p.t.replace(' · queued', '')), ...x.pc].slice(0, 5) }),
+      wifiLabel: s.online ? 'Wi-Fi: on' : 'Wi-Fi: off', wifiC: s.online ? A : '#ff7a59', wifiIcon: s.online ? '⇄' : '⊘', queueLabel: s.online ? 'synced' : s.queue + ' queued',
+      phoneList: s.phone.length ? s.phone : [{ t: 'No audits yet', c: '#6c6b66' }], pcList: s.pc.length ? s.pc : ['Waiting for sync…'],
+      tenants: TENANTS.map((t, i) => ({ ...t, bg: i === s.ten ? '#fff' : 'transparent', bd: i === s.ten ? t.color : '#d9d6cc', pick: () => this.setState({ ten: i }) })),
+      roles: ROLES.map((r, i) => ({ name: r, bg: i === s.role ? '#141416' : 'transparent', fg: i === s.role ? '#f2f0e9' : '#141416', bd: i === s.role ? '#141416' : '#c9c6bb', pick: () => this.setState({ role: i }) })),
+      ksColor: T.color, ksIni: T.ini, ksName: T.name, ksRole: R, ksRoleUp: R.toUpperCase(), ksTenantId: T.id, ksRoleId: R.toLowerCase(),
+      ksNav: MODS.map((m, i) => { const ok = !!m.can[R], a = i === modIdx; return { name: m.name, lock: ok ? '' : '🔒', cur: ok ? 'pointer' : 'not-allowed', bg: a ? T.color : 'transparent', fg: a ? '#fff' : ok ? '#141416' : '#b4b1a6', pick: () => ok && this.setState({ mod: i }) }; }),
+      ksMod: M, ksCan: M.can[R], ksAccess: `${allowed.length} of 8 modules visible to ${R.toLowerCase()} · data scoped to ${T.id}`,
+      skills: SKILLS.map(g => ({ k: g.k, items: g.items.map(n => { const a = n === s.skill, used = !!USES[n]; return { name: n, bg: a ? A : 'transparent', fg: a ? '#0f1012' : used ? '#ecebe6' : '#9b9a94', bd: a ? A : used ? '#3a3c42' : '#2a2c31', hover: () => this.setState({ skill: n }) }; }) })),
+      skillSel: s.skill, skillNone: uses.length === 0,
+      skillUses: uses.map(i => i >= 10 ? { t: PROJECTS[i - 10].name, href: '#projects', go: e => { e.preventDefault(); this.setState({ proj: i - 10, pf: 'All' }); this.go('projects'); } } : i === 6 ? { t: 'KalaSphere-AI', href: '#kalasphere', go: e => { e.preventDefault(); this.go('kalasphere'); } } : { t: TOOLS[i].title, href: '#lab', go: e => { e.preventDefault(); this.setState({ tool: i }); this.go('lab'); } }),
+      leadership: [
+        { when: '2026', t: 'Co-organizer, RAAS RANG 2026', d: 'A cultural event run with Cult Events: managing a ₹2.5 lakh budget, sponsorships and outreach.' },
+        { when: '2024 – 25', t: 'UCR and UFR', d: 'Served as UCR and UFR for the 2024–2025 academic year.' },
+        { when: 'Council', t: 'General Secretary, SENSES Council', d: 'Student council of the Electronics & Computer Engineering department.' }
+      ],
+      cName: s.cName, cCo: s.cCo, cMsg: s.cMsg, cJson: json,
+      setName: e => this.setState({ cName: e.target.value }), setCo: e => this.setState({ cCo: e.target.value }), setMsg: e => this.setState({ cMsg: e.target.value }),
+      send: () => { location.href = 'mailto:prabhugovind0302@gmail.com?subject=' + encodeURIComponent('Role for Govind — ' + (s.cCo || s.cName || 'hello')) + '&body=' + encodeURIComponent(json); }
+    };
+  }
+}
+</script>
+</body>
+</html>
