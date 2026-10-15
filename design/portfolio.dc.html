@@ -7,22 +7,71 @@
 </head>
 <body>
 <x-dc>
-<helmet><title>Govind Prabhu · Full-Stack Developer</title><meta name="description" content="Full-stack developer from Goa. Six tools shipped at Siemens, plus AI products: Smart Inventory, ATLAS, AeroTrans AI, KalaSphere-AI."><template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0f1012"/><rect x="30" y="30" width="40" height="40" rx="9" fill="#c8f560"/><text x="50" y="57" text-anchor="middle" font-family="Arial" font-weight="800" font-size="18" fill="#0f1012">GP</text></svg></template><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700;800&display=swap"><style>html{scroll-behavior:smooth}body{margin:0;background:#0f1012;color:#ecebe6;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:#c8f560;text-decoration:none}@media(max-width:1000px){[data-topnav]{display:none!important}}a:hover{color:#fff}::selection{background:#c8f560;color:#0f1012}input,textarea,button{font:inherit;color:inherit}@keyframes flow{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}@keyframes pulse{50%{opacity:.35}}</style></helmet>
+<helmet><title>Govind Prabhu · Full-Stack Developer</title><meta name="description" content="Full-stack developer from Goa. Six tools shipped at Siemens, plus AI products: Smart Inventory, ATLAS, WooCRM, AeroTrans AI, KalaSphere-AI."><template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0f1012"/><rect x="30" y="30" width="40" height="40" rx="9" fill="#c8f560"/><text x="50" y="57" text-anchor="middle" font-family="Arial" font-weight="800" font-size="18" fill="#0f1012">GP</text></svg></template><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700;800&display=swap"><style>
+:root{--a:#c8f560;--mx:50vw;--my:30vh}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0f1012;color:#ecebe6;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(620px 420px at var(--mx) var(--my),rgba(200,245,96,.075),transparent 62%),radial-gradient(900px 520px at 88% -6%,rgba(200,245,96,.055),transparent 60%)}
+body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:#c8f560;text-decoration:none}a:hover{color:#fff}
+::selection{background:#c8f560;color:#0f1012}
+input,textarea,button{font:inherit;color:inherit}
+button,a,input,textarea{transition:color .2s,background .2s,border-color .2s,box-shadow .25s,transform .25s}
+:focus-visible{outline:2px solid #c8f560;outline-offset:3px}
+input:focus,textarea:focus{border-color:#c8f560!important;box-shadow:0 0 0 3px rgba(200,245,96,.14)}
+@media(max-width:1000px){[data-topnav]{display:none!important}}
+.show-sm{display:none}
+@media(max-width:700px){.hide-sm{display:none!important}.show-sm{display:inline!important}}
+@keyframes flow{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes pulse{50%{opacity:.35}}
+@keyframes rv{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes bar{to{transform:scaleX(1)}}
+@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes shine{to{background-position:-200% 0}}
+@property --ang{syntax:"<angle>";initial-value:0deg;inherits:false}
+@keyframes spin{to{--ang:360deg}}
+.rv{opacity:1}
+@supports (animation-timeline:view()){.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 38%}}
+.gp-bar{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:linear-gradient(90deg,#c8f560,#f0ffb0);transform-origin:0 50%;transform:scaleX(0)}
+@supports (animation-timeline:scroll()){.gp-bar{animation:bar linear both;animation-timeline:scroll(root)}}
+.nv{position:relative;padding:6px 0;transition:color .2s}
+.nv::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:#c8f560;transform:scaleX(0);transform-origin:0 50%;transition:transform .25s}
+.nv:hover,.nv[data-on="1"]{color:#ecebe6!important}
+.nv:hover::after,.nv[data-on="1"]::after{transform:scaleX(1)}
+.hero{position:relative}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 50% 40%,#000 20%,transparent 75%)}
+.grad{background:linear-gradient(100deg,#c8f560 0%,#f3ffc2 35%,#c8f560 70%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent!important;animation:shine 7s linear infinite}
+.gb{border:1px solid transparent!important;background:linear-gradient(#16171a,#16171a) padding-box,conic-gradient(from var(--ang),rgba(200,245,96,0) 0%,rgba(200,245,96,.95) 10%,rgba(200,245,96,0) 28%,rgba(200,245,96,0) 100%) border-box!important;animation:spin 8s linear infinite;box-shadow:0 30px 80px -40px rgba(200,245,96,.25)}
+.mq{overflow:hidden;border-bottom:1px solid #22242a;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.mq-t{display:flex;gap:40px;width:max-content;padding:15px 0;animation:mq 55s linear infinite;font:500 12.5px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#6c6b66;text-transform:uppercase}
+.mq:hover .mq-t{animation-play-state:paused}
+.mq-t span::before{content:"\25C6";color:#c8f560;margin-right:40px;font-size:8px;vertical-align:middle}
+.lift{transition:transform .25s,border-color .25s,background .25s,box-shadow .25s}
+.lift:hover{transform:translateY(-2px);box-shadow:0 16px 40px -22px rgba(200,245,96,.35);border-color:#4b4e57!important}
+.cta{transition:transform .2s,background .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px -10px rgba(200,245,96,.55)}
+.stat span:first-child{background:linear-gradient(180deg,#fff,#b9b8b1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-no{position:absolute;right:clamp(16px,4vw,40px);top:60px;font:400 clamp(110px,16vw,220px)/1 'Instrument Serif',serif;color:transparent;-webkit-text-stroke:1px #ffffff12;pointer-events:none;user-select:none}
+.ks-app{display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr)}
+@media(max-width:640px){.ks-app{grid-template-columns:1fr}.ks-nav{border-right:0!important;border-bottom:1px solid #ebe8df;flex-direction:row!important;flex-wrap:wrap}.sec-no{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+</style></helmet>
 
 <header style="position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,40px);background:rgba(15,16,18,.86);backdrop-filter:blur(10px);border-bottom:1px solid #22242a">
 <a href="#top" style="flex:none;white-space:nowrap;display:flex;align-items:center;gap:10px;color:#ecebe6"><span style="width:30px;height:30px;display:grid;place-items:center;background:#c8f560;color:#0f1012;font:800 13px Archivo,sans-serif;border-radius:7px">GP</span><span style="font:600 14px Archivo,sans-serif">Govind Prabhu</span></a>
-<nav data-topnav="1" style="display:flex;gap:clamp(12px,1.6vw,22px);flex-wrap:wrap;justify-content:center;min-width:0;font:500 13px Archivo,sans-serif;white-space:nowrap"><a href="#lab" style="color:#9b9a94">Siemens Lab</a><a href="#kalasphere" style="color:#9b9a94">KalaSphere-AI</a><a href="#projects" style="color:#9b9a94">Projects</a><a href="#stack" style="color:#9b9a94">Stack</a><a href="#about" style="color:#9b9a94">About</a><a href="#contact" style="color:#9b9a94">Contact</a></nav>
-<button onClick="{{ openPalette }}" style="flex:none;white-space:nowrap;display:flex;align-items:center;gap:10px;background:#16171a;border:1px solid #2a2c31;border-radius:8px;padding:7px 10px;cursor:pointer;font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">Jump to… <span style="padding:2px 6px;border:1px solid #2a2c31;border-radius:4px;color:#ecebe6">⌘K</span></button>
+<nav data-topnav="1" style="display:flex;gap:clamp(12px,1.6vw,22px);flex-wrap:wrap;justify-content:center;min-width:0;font:500 13px Archivo,sans-serif;white-space:nowrap"><sc-for list="{{ navItems }}" as="n" hint-placeholder-count="6"><a class="nv" href="{{ n.href }}" data-on="{{ n.on }}" style="color:#9b9a94">{{ n.t }}</a></sc-for></nav>
+<button onClick="{{ openPalette }}" aria-label="Open command palette" class="cta" style="flex:none;white-space:nowrap;display:flex;align-items:center;gap:10px;background:#16171a;border:1px solid #2a2c31;border-radius:8px;padding:7px 10px;cursor:pointer;font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94"><span class="hide-sm">Jump to…</span><span class="show-sm">Menu</span> <span class="hide-sm" style="padding:2px 6px;border:1px solid #2a2c31;border-radius:4px;color:#ecebe6">⌘K</span><span class="show-sm" style="color:#c8f560">☰</span></button>
+<span class="gp-bar"></span>
 </header>
 
-<section id="top" style="max-width:1280px;margin:0 auto;padding:clamp(56px,9vw,120px) clamp(16px,4vw,40px) 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:56px;align-items:center">
+<section id="top" class="hero" style="max-width:1280px;margin:0 auto;padding:clamp(56px,9vw,120px) clamp(16px,4vw,40px) 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:56px;align-items:center">
 <div style="display:flex;flex-direction:column;gap:26px">
 <div style="display:flex;align-items:center;gap:10px;font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94"><span style="width:8px;height:8px;border-radius:50%;background:#c8f560;animation:pulse 1.6s infinite"></span>Full-stack developer · Sanquelim, Goa · open to roles from 2027</div>
-<h1 style="margin:0;font:400 clamp(52px,7.4vw,112px)/.92 'Instrument Serif',serif;letter-spacing:-.02em;text-wrap:balance">I turn spreadsheets into <span style="font-style:italic;color:#c8f560">software</span> people use.</h1>
-<p style="margin:0;max-width:560px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:#b9b8b1;text-wrap:pretty">I'm Govind. At Siemens I replaced six Excel, macro and paper workflows with working tools. I also build my own products, including an agentic AI assistant, a multi-tenant inventory platform, an aviation translator and KalaSphere-AI, a multi-tenant ERP. Everything below is interactive, so you can try the work instead of just reading about it.</p>
-<div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#lab" style-hover="background:#ddff7a" style="background:#c8f560;color:#0f1012;padding:13px 20px;border-radius:9px;font:700 15px Archivo,sans-serif">Try the work ↓</a><a href="mailto:prabhugovind0302@gmail.com" style-hover="border-color:#ecebe6" style="border:1px solid #3a3c42;color:#ecebe6;padding:13px 20px;border-radius:9px;font:600 15px Archivo,sans-serif">prabhugovind0302@gmail.com</a></div>
+<h1 style="margin:0;font:400 clamp(52px,7.4vw,112px)/.92 'Instrument Serif',serif;letter-spacing:-.02em;text-wrap:balance">I turn spreadsheets into <span class="grad" style="font-style:italic;color:#c8f560">software</span> people use.</h1>
+<p style="margin:0;max-width:560px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:#b9b8b1;text-wrap:pretty">I'm Govind. At Siemens I replaced six Excel, macro and paper workflows with working tools. I also build my own products, including an agentic AI assistant, a multi-tenant inventory platform, a WooCommerce CRM with an AI retention agent, an aviation translator and KalaSphere-AI, a multi-tenant ERP. Everything below is interactive, so you can try the work instead of just reading about it.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#lab" class="cta" style-hover="background:#ddff7a" style="background:#c8f560;color:#0f1012;padding:13px 20px;border-radius:9px;font:700 15px Archivo,sans-serif">Try the work ↓</a><a href="mailto:prabhugovind0302@gmail.com" class="cta" style-hover="border-color:#ecebe6" style="border:1px solid #3a3c42;color:#ecebe6;padding:13px 20px;border-radius:9px;font:600 15px Archivo,sans-serif">prabhugovind0302@gmail.com</a></div>
 </div>
-<div style="background:#16171a;border:1px solid #2a2c31;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:16px">
+<div class="gb" style="background:#16171a;border:1px solid #2a2c31;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:16px">
 <div style="display:flex;justify-content:space-between;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#6c6b66"><span>SYSTEM MAP · HOW I BUILD</span><span style="color:#c8f560">● LIVE</span></div>
 <sc-for list="{{ layers }}" as="l" hint-placeholder-count="4">
 <div style="display:flex;flex-direction:column;gap:8px">
@@ -38,16 +87,18 @@
 </div>
 </section>
 
-<section style="border-top:1px solid #22242a;border-bottom:1px solid #22242a;background:#131417">
+<div class="mq" aria-hidden="true"><div class="mq-t"><sc-for list="{{ ticker }}" as="x" hint-placeholder-count="12"><span>{{ x }}</span></sc-for></div></div>
+
+<section class="rv" style="border-top:1px solid #22242a;border-bottom:1px solid #22242a;background:#131417">
 <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
-<div style="padding:26px clamp(16px,4vw,40px);border-right:1px solid #22242a;display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">6</span><span style="font-size:14px;color:#9b9a94">tools shipped at Siemens in 3 months</span></div>
-<div style="padding:26px clamp(16px,4vw,40px);border-right:1px solid #22242a;display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">14,000+</span><span style="font-size:14px;color:#9b9a94">SAP rows a month, no longer reconciled by hand</span></div>
-<div style="padding:26px clamp(16px,4vw,40px);border-right:1px solid #22242a;display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">3</span><span style="font-size:14px;color:#9b9a94">teams served: finance, quality, production</span></div>
-<div style="padding:26px clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">Web · Mobile · Desktop</span><span style="font-size:14px;color:#9b9a94">platforms I've shipped to</span></div>
+<div class="stat" style="padding:26px clamp(16px,4vw,40px);border-right:1px solid #22242a;display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">6</span><span style="font-size:14px;color:#9b9a94">tools shipped at Siemens in 3 months</span></div>
+<div class="stat" style="padding:26px clamp(16px,4vw,40px);border-right:1px solid #22242a;display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">14,000+</span><span style="font-size:14px;color:#9b9a94">SAP rows a month, no longer reconciled by hand</span></div>
+<div class="stat" style="padding:26px clamp(16px,4vw,40px);border-right:1px solid #22242a;display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">3</span><span style="font-size:14px;color:#9b9a94">teams served: finance, quality, production</span></div>
+<div class="stat" style="padding:26px clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:4px"><span style="font:800 34px Archivo,sans-serif;letter-spacing:-.02em">Web · Mobile · Desktop</span><span style="font-size:14px;color:#9b9a94">platforms I've shipped to</span></div>
 </div>
 </section>
 
-<section id="lab" style="max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px) 80px;display:flex;flex-direction:column;gap:40px;scroll-margin-top:60px">
+<section id="lab" class="rv" style="position:relative;max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px) 80px;display:flex;flex-direction:column;gap:40px;scroll-margin-top:60px"><span class="sec-no" aria-hidden="true">01</span>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 60px;align-items:end">
 <div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">01 · EXPERIENCE · SIEMENS LIMITED, VERNA</span><h2 style="margin:0;font:400 clamp(44px,6vw,84px)/.95 'Instrument Serif',serif">The Siemens <span style="font-style:italic">Lab</span></h2></div>
 <p style="margin:0;font-size:17px;line-height:1.6;color:#b9b8b1;text-wrap:pretty">Automation &amp; Digitalization Intern, Aug to Oct 2026. Pick a tool to see the problem, what I built, the result, and a working demo of how it behaves. Demo data is made up; the logic follows the real tool.</p>
@@ -56,7 +107,7 @@
 <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
 <div style="flex:1 1 280px;max-width:100%;display:flex;flex-direction:column;gap:6px">
 <sc-for list="{{ tools }}" as="t" hint-placeholder-count="6">
-<button onClick="{{ t.pick }}" style="text-align:left;cursor:pointer;background:{{ t.bg }};border:1px solid {{ t.bd }};border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:4px 10px">
+<button class="lift" onClick="{{ t.pick }}" style="text-align:left;cursor:pointer;background:{{ t.bg }};border:1px solid {{ t.bd }};border-radius:12px;padding:16px 18px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:4px 10px">
 <span style="font:600 12px 'IBM Plex Mono',monospace;color:{{ t.nc }}">{{ t.no }}</span>
 <span style="font:700 16px/1.25 Archivo,sans-serif;color:#ecebe6">{{ t.title }}</span>
 <span></span>
@@ -186,7 +237,7 @@
 </section>
 
 <section id="kalasphere" style="background:#f2f0e9;color:#141416;scroll-margin-top:60px">
-<div style="max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:40px">
+<div class="rv" style="max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px);display:flex;flex-direction:column;gap:40px">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 60px;align-items:end">
 <div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#4d6b12">02 · PROJECT · SOLO · IN PRODUCTION</span><h2 style="margin:0;font:400 clamp(52px,7.4vw,112px)/.9 'Instrument Serif',serif">KalaSphere<span style="font-style:italic;color:#4d6b12">-AI</span></h2></div>
 <p style="margin:0;font-size:17px;line-height:1.6;color:#3c3b38;text-wrap:pretty">A multi-tenant ERP for cultural institutions, built on Supabase and PostgreSQL. It's one codebase, and every institution gets its own branding, users, events, venues, faculty, students and reports, separated from the others by role-based access. Switch tenant or role below to see how the product changes.</p>
@@ -196,7 +247,7 @@
 <div style="flex:1 1 280px;display:flex;flex-direction:column;gap:22px">
 <div style="display:flex;flex-direction:column;gap:10px"><span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6b6a64">TENANT (DEMO)</span>
 <sc-for list="{{ tenants }}" as="t" hint-placeholder-count="3">
-<button onClick="{{ t.pick }}" style="cursor:pointer;text-align:left;display:flex;align-items:center;gap:12px;background:{{ t.bg }};border:1px solid {{ t.bd }};border-radius:10px;padding:12px 14px"><span style="width:28px;height:28px;border-radius:7px;background:{{ t.color }};color:#fff;display:grid;place-items:center;font:700 13px Archivo,sans-serif">{{ t.ini }}</span><span style="font:600 15px Archivo,sans-serif;color:#141416;white-space:nowrap">{{ t.name }}</span></button>
+<button class="lift" onClick="{{ t.pick }}" style="cursor:pointer;text-align:left;display:flex;align-items:center;gap:12px;background:{{ t.bg }};border:1px solid {{ t.bd }};border-radius:10px;padding:12px 14px"><span style="width:28px;height:28px;border-radius:7px;background:{{ t.color }};color:#fff;display:grid;place-items:center;font:700 13px Archivo,sans-serif">{{ t.ini }}</span><span style="font:600 15px Archivo,sans-serif;color:#141416;white-space:nowrap">{{ t.name }}</span></button>
 </sc-for>
 </div>
 <div style="display:flex;flex-direction:column;gap:10px"><span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6b6a64">SIGNED IN AS</span>
@@ -214,8 +265,8 @@
 <div style="display:flex;align-items:center;gap:10px"><span style="width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.2);display:grid;place-items:center;font:800 13px Archivo,sans-serif">{{ ksIni }}</span><span style="font:700 16px Archivo,sans-serif">{{ ksName }}</span></div>
 <span style="font:500 12px 'IBM Plex Mono',monospace;background:rgba(0,0,0,.2);padding:4px 10px;border-radius:999px">{{ ksRole }}</span>
 </div>
-<div style="display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr);min-height:340px">
-<div style="border-right:1px solid #ebe8df;padding:12px;display:flex;flex-direction:column;gap:3px;background:#faf9f5">
+<div class="ks-app" style="min-height:340px">
+<div class="ks-nav" style="border-right:1px solid #ebe8df;padding:12px;display:flex;flex-direction:column;gap:3px;background:#faf9f5">
 <sc-for list="{{ ksNav }}" as="m" hint-placeholder-count="8">
 <button onClick="{{ m.pick }}" style="cursor:{{ m.cur }};text-align:left;border:0;border-radius:7px;padding:9px 10px;font:500 13.5px Archivo,sans-serif;background:{{ m.bg }};color:{{ m.fg }};display:flex;justify-content:space-between;gap:6px"><span>{{ m.name }}</span><span style="font:500 11px 'IBM Plex Mono',monospace">{{ m.lock }}</span></button>
 </sc-for>
@@ -236,9 +287,9 @@
 </div>
 </section>
 
-<section id="projects" style="max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px) 80px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:60px">
+<section id="projects" class="rv" style="position:relative;max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px) 80px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:60px"><span class="sec-no" aria-hidden="true">03</span>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 60px;align-items:end">
-<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">03 · PROJECTS · 13 REPOS ON GITHUB</span><h2 style="margin:0;font:400 clamp(44px,6vw,84px)/.95 'Instrument Serif',serif">Things I've <span style="font-style:italic">shipped</span></h2></div>
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">03 · PROJECTS · 17 REPOS ON GITHUB</span><h2 style="margin:0;font:400 clamp(44px,6vw,84px)/.95 'Instrument Serif',serif">Things I've <span style="font-style:italic">shipped</span></h2></div>
 <p style="margin:0;font-size:17px;line-height:1.6;color:#b9b8b1;text-wrap:pretty">Products I designed and built end to end: AI agents, multi-tenant SaaS and security-first systems. Pick one to see how it works and the engineering decisions behind it.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:8px">
@@ -249,12 +300,12 @@
 <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
 <div style="flex:1 1 280px;max-width:100%;display:flex;flex-direction:column;gap:6px">
 <sc-for list="{{ projList }}" as="p" hint-placeholder-count="6">
-<button onClick="{{ p.pick }}" style="text-align:left;cursor:pointer;background:{{ p.bg }};border:1px solid {{ p.bd }};border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+<button class="lift" onClick="{{ p.pick }}" style="text-align:left;cursor:pointer;background:{{ p.bg }};border:1px solid {{ p.bd }};border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
 <span style="display:flex;justify-content:space-between;gap:10px;align-items:baseline"><span style="font:700 16px/1.25 Archivo,sans-serif;color:#ecebe6">{{ p.name }}</span><span style="font:500 11px 'IBM Plex Mono',monospace;color:{{ p.nc }};white-space:nowrap">{{ p.status }}</span></span>
 <span style="font-size:13.5px;line-height:1.45;color:#9b9a94">{{ p.one }}</span>
 </button>
 </sc-for>
-<a href="https://github.com/govindprabhu03?tab=repositories" target="_blank" style="padding:14px 18px;border:1px dashed #3a3c42;border-radius:12px;font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">+ 7 more repositories on GitHub ↗</a>
+<a href="https://github.com/govindprabhu03?tab=repositories" target="_blank" style="padding:14px 18px;border:1px dashed #3a3c42;border-radius:12px;font:500 12px 'IBM Plex Mono',monospace;color:#9b9a94">+ 10 more repositories on GitHub ↗</a>
 </div>
 <div style="flex:3 1 560px;min-width:0;background:#16171a;border:1px solid #2a2c31;border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
 <div style="padding:26px 28px;display:flex;flex-direction:column;gap:14px;border-bottom:1px solid #2a2c31">
@@ -287,11 +338,31 @@
 </div>
 </div>
 </sc-if>
+<sc-if value="{{ pjIsCrm }}" hint-placeholder-val="{{ false }}">
+<div style="padding:22px 28px;border-bottom:1px solid #2a2c31;background:#121316;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#6c6b66"><span>▸ TRY IT · AI RETENTION RUN</span><span>demo customers are made up · segment rules match the real code</span></div>
+<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap"><button class="cta" onClick="{{ runCrm }}" style="cursor:pointer;background:#c8f560;color:#0f1012;border:0;border-radius:8px;padding:10px 16px;font:700 14px Archivo,sans-serif">{{ crmBtn }}</button><sc-if value="{{ crmRun }}" hint-placeholder-val="{{ false }}"><span style="font:500 12.5px 'IBM Plex Mono',monospace;color:#9b9a94">{{ crmSummary }}</span></sc-if></div>
+<div style="border:1px solid #2a2c31;border-radius:9px;overflow-x:auto">
+<sc-for list="{{ crmRows }}" as="r" hint-placeholder-count="6">
+<div style="min-width:560px;display:grid;grid-template-columns:minmax(110px,1.3fr) 92px minmax(70px,.7fr) minmax(0,1.5fr) 118px;gap:10px;padding:10px 14px;border-top:1px solid #22242a;font:500 12.5px 'IBM Plex Mono',monospace;align-items:center">
+<span style="color:#ecebe6">{{ r.name }}</span><span style="color:{{ r.segC }}">{{ r.seg }}</span><span style="color:#9b9a94">{{ r.days }}</span><span style="color:#6c6b66;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ r.ltv }}</span>
+<span style="text-align:right">
+<sc-if value="{{ r.can }}" hint-placeholder-val="{{ false }}"><button class="cta" onClick="{{ r.approve }}" style="cursor:pointer;background:transparent;border:1px solid #c8f560;color:#c8f560;border-radius:6px;padding:4px 9px;font:600 11.5px 'IBM Plex Mono',monospace">Approve ✉</button></sc-if>
+<sc-if value="{{ r.sent }}" hint-placeholder-val="{{ false }}"><span style="color:#c8f560">✓ SENT · LOGGED</span></sc-if>
+<sc-if value="{{ r.none }}" hint-placeholder-val="{{ true }}"><span style="color:#4a4c52">{{ r.noneLabel }}</span></sc-if>
+</span>
+</div>
+</sc-for>
+</div>
+<sc-if value="{{ crmRun }}" hint-placeholder-val="{{ false }}"><pre style="margin:0;background:#0f1012;border:1px solid #22242a;border-radius:8px;padding:12px 14px;font:500 12.5px/1.6 'IBM Plex Mono',monospace;color:#b9b8b1;white-space:pre-wrap;word-break:break-word"><span style="color:#6c6b66">// agent draft, awaiting human approval</span>
+{{ crmDraft }}</pre></sc-if>
+</div>
+</sc-if>
 <div style="padding:24px 28px;display:flex;flex-direction:column;gap:14px;border-bottom:1px solid #2a2c31">
 <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6c6b66">KEY ENGINEERING DECISIONS</span>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
 <sc-for list="{{ pjDecisions }}" as="d" hint-placeholder-count="4">
-<div style="background:#1d1f23;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font:700 15px/1.3 Archivo,sans-serif;color:#ecebe6">{{ d.t }}</span><span style="font-size:14px;line-height:1.55;color:#9b9a94;text-wrap:pretty">{{ d.d }}</span></div>
+<div class="lift" style="background:#1d1f23;border:1px solid transparent;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font:700 15px/1.3 Archivo,sans-serif;color:#ecebe6">{{ d.t }}</span><span style="font-size:14px;line-height:1.55;color:#9b9a94;text-wrap:pretty">{{ d.d }}</span></div>
 </sc-for>
 </div>
 </div>
@@ -302,7 +373,7 @@
 </div>
 </section>
 
-<section id="stack" style="max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px) 80px;display:flex;flex-direction:column;gap:36px;scroll-margin-top:60px">
+<section id="stack" class="rv" style="position:relative;max-width:1280px;margin:0 auto;padding:110px clamp(16px,4vw,40px) 80px;display:flex;flex-direction:column;gap:36px;scroll-margin-top:60px"><span class="sec-no" aria-hidden="true">04</span>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 60px;align-items:end">
 <div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">04 · TECHNICAL SKILLS</span><h2 style="margin:0;font:400 clamp(44px,6vw,84px)/.95 'Instrument Serif',serif">The <span style="font-style:italic">stack</span>, wired up</h2></div>
 <p style="margin:0;font-size:17px;line-height:1.6;color:#b9b8b1;text-wrap:pretty">Hover or tap any skill to see where I've used it in shipped work.</p>
@@ -332,7 +403,7 @@
 </div>
 </section>
 
-<section id="about" style="max-width:1280px;margin:0 auto;padding:60px clamp(16px,4vw,40px) 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:40px;scroll-margin-top:60px">
+<section id="about" class="rv" style="max-width:1280px;margin:0 auto;padding:60px clamp(16px,4vw,40px) 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:40px;scroll-margin-top:60px">
 <div style="display:flex;flex-direction:column;gap:18px">
 <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">05 · EDUCATION</span>
 <div style="border:1px solid #2a2c31;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:10px;background:#16171a">
@@ -352,7 +423,7 @@
 </section>
 
 <section id="contact" style="border-top:1px solid #22242a;scroll-margin-top:60px">
-<div style="max-width:1280px;margin:0 auto;padding:100px clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px;align-items:start">
+<div class="rv" style="max-width:1280px;margin:0 auto;padding:100px clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px;align-items:start">
 <div style="display:flex;flex-direction:column;gap:22px">
 <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#c8f560">07 · CONTACT</span>
 <h2 style="margin:0;font:400 clamp(48px,6.4vw,96px)/.92 'Instrument Serif',serif">Send me a <span style="font-style:italic;color:#c8f560">request.</span></h2>
@@ -366,7 +437,7 @@
 <input value="{{ cCo }}" onChange="{{ setCo }}" placeholder="Company" style="background:#1d1f23;border:1px solid #2a2c31;border-radius:8px;padding:11px 13px;outline:none;font-size:15px"></input>
 <textarea value="{{ cMsg }}" onChange="{{ setMsg }}" placeholder="What are you building?" rows="3" style="background:#1d1f23;border:1px solid #2a2c31;border-radius:8px;padding:11px 13px;outline:none;font-size:15px;resize:vertical"></textarea>
 <pre style="margin:0;background:#0f1012;border:1px solid #22242a;border-radius:8px;padding:12px 14px;font:500 12.5px/1.6 'IBM Plex Mono',monospace;color:#b9b8b1;white-space:pre-wrap;word-break:break-word">{{ cJson }}</pre>
-<button onClick="{{ send }}" style-hover="background:#ddff7a" style="cursor:pointer;background:#c8f560;color:#0f1012;border:0;border-radius:9px;padding:13px;font:700 15px Archivo,sans-serif">Send request →</button>
+<button class="cta" onClick="{{ send }}" style-hover="background:#ddff7a" style="cursor:pointer;background:#c8f560;color:#0f1012;border:0;border-radius:9px;padding:13px;font:700 15px Archivo,sans-serif">Send request →</button>
 </div>
 </div>
 </div>
@@ -436,16 +507,16 @@ const MODS = [
 const SKILLS = [
   { k: 'Languages', items: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'] },
   { k: 'Frontend & Mobile', items: ['React', 'Next.js', 'Tailwind', 'Three.js', 'React Native', 'Expo', 'Electron', 'Bootstrap', 'Mobile-first UI'] },
-  { k: 'Backend', items: ['Node.js', 'Express.js', 'Flask', 'FastAPI', 'REST APIs', 'Socket.io'] },
+  { k: 'Backend', items: ['Node.js', 'Express.js', 'Flask', 'FastAPI', 'SQLAlchemy', 'REST APIs', 'Socket.io'] },
   { k: 'Databases', items: ['PostgreSQL', 'SQLite', 'MongoDB', 'SQL Server', 'Supabase'] },
   { k: 'Data & Automation', items: ['pandas', 'openpyxl', 'SheetJS', 'PyInstaller', 'Task Scheduler', 'Excel VBA'] },
   { k: 'Enterprise & IoT', items: ['SAP', 'Mendix', 'Power Apps', 'Arduino', 'ESP32'] },
   { k: 'AI & ML', items: ['Claude API', 'Gemini', 'BLIP / VQA', 'Faster R-CNN', 'Whisper', 'Tesseract.js'] },
-  { k: 'Security & Arch.', items: ['OAuth', 'RBAC', 'Row-level security', 'E2E encryption', 'Multi-tenant SaaS', 'Offline-first'] },
-  { k: 'Tools', items: ['Git', 'GitHub', 'Vercel'] }
+  { k: 'Security & Arch.', items: ['OAuth', 'RBAC', 'Row-level security', 'E2E encryption', 'Webhooks (HMAC)', 'Multi-tenant SaaS', 'Offline-first'] },
+  { k: 'Tools', items: ['Git', 'GitHub', 'Vercel', 'Render', 'Docker', 'pytest', 'Playwright'] }
 ];
 const USES = { Python: [0, 1, 2, 3, 4], JavaScript: [4], SQL: [1, 6], React: [5], 'React Native': [5], Expo: [5], Electron: [5], Flask: [0, 1], PostgreSQL: [6], SQLite: [1, 5], 'SQL Server': [1], Supabase: [6], pandas: [0], SheetJS: [4], PyInstaller: [0], 'Task Scheduler': [2], 'Excel VBA': [4], SAP: [0, 4], RBAC: [6], 'Multi-tenant SaaS': [6], 'Offline-first': [5], 'Mobile-first UI': [5, 6] };
-const PUSE = { Supabase: [10, 11, 14], PostgreSQL: [10, 13, 14], React: [10, 11, 13], TypeScript: [10, 11], Python: [12, 13, 15], JavaScript: [14, 15], Flask: [15], OAuth: [10, 14], RBAC: [10], 'Multi-tenant SaaS': [10], 'Next.js': [10], Tailwind: [10, 11, 13], 'Three.js': [11, 15], FastAPI: [11, 12, 13], SQLite: [12], Vercel: [10], 'Claude API': [12], Gemini: [10], 'BLIP / VQA': [13], 'Faster R-CNN': [13], Whisper: [11], 'Tesseract.js': [14], 'Row-level security': [10, 11, 14], 'E2E encryption': [11] };
+const PUSE = { Supabase: [10, 11, 14], PostgreSQL: [10, 13, 14, 16], React: [10, 11, 13], TypeScript: [10, 11], Python: [12, 13, 15, 16], JavaScript: [14, 15], Flask: [15], SQLAlchemy: [13, 16], 'Webhooks (HMAC)': [16], Docker: [16], pytest: [16], Playwright: [16], Render: [12, 14, 16], OAuth: [10, 14, 16], RBAC: [10], 'Multi-tenant SaaS': [10], 'Next.js': [10], Tailwind: [10, 11, 13], 'Three.js': [11, 15], FastAPI: [11, 12, 13, 16], SQLite: [12, 16], Vercel: [10], 'Claude API': [12], Gemini: [10, 16], 'BLIP / VQA': [13], 'Faster R-CNN': [13], Whisper: [11], 'Tesseract.js': [14], 'Row-level security': [10, 11, 14], 'E2E encryption': [11] };
 Object.keys(PUSE).forEach(k => { USES[k] = (USES[k] || []).concat(PUSE[k]); });
 const PROJECTS = [
   { name: 'Smart Inventory', status: '● LIVE', tags: ['AI', 'Full-stack', 'Security'], kind: 'AI-POWERED · MULTI-TENANT SAAS', one: 'Inventory for small businesses, with an AI assistant and demand forecasting.',
@@ -499,11 +570,32 @@ const PROJECTS = [
     steps: ['Enter address', 'Geocode', 'Faults + recent quakes', 'Risk score', 'Preparedness checklist'],
     decisions: [{ t: 'One input, a full profile', d: 'An address is the only thing the user types; everything else is worked out and shown together.' },
       { t: '3D first', d: 'Built on Three.js so the risk data is shown in space, not just in a table.' }],
-    stack: ['Python', 'Flask', 'JavaScript', 'Three.js'] }
+    stack: ['Python', 'Flask', 'JavaScript', 'Three.js'] },
+  { name: 'WooCRM', status: '● LIVE', tags: ['AI', 'Full-stack', 'Security'], kind: 'AGENTIC AI · WOOCOMMERCE INTEGRATION · FASTAPI', one: 'A CRM that plugs into WooCommerce and does the customer-retention work for the store owner.',
+    desc: 'Syncs customers and orders from a WooCommerce store, scores and segments every customer (VIP, new, active, at-risk, churned), tracks orders live through webhooks and runs automated email workflows. An AI agent answers questions about the customer base and drafts win-back emails, but a person approves every send. It also runs against a built-in mock store, so it works without a real shop.',
+    live: 'https://woocrm.onrender.com', repo: 'https://github.com/govindprabhu03/woocrm',
+    steps: ['WooCommerce REST + webhooks', 'HMAC signature check', 'Sync customers & orders', 'RFM score → segment', 'Workflow engine', 'Agent drafts email', 'Human approves'],
+    decisions: [{ t: 'Webhooks are verified and idempotent', d: 'Each webhook’s HMAC-SHA256 signature is checked in constant time, and each webhook ID is processed once, so a Woo retry can never send a second email.' },
+      { t: 'The AI drafts, a person sends', d: 'The Gemini agent uses a fixed set of CRM tools (segment summary, search, draft email, create workflow). Anything outbound waits for approval in the UI.' },
+      { t: 'Pure domain logic, swappable edges', d: 'Segmentation has no I/O. WooCommerce, email and the AI backend sit behind adapters, so the same code runs against a real shop, a mock store or a test double.' },
+      { t: 'Quiet first import', d: 'The initial historical sync emits no events, so connecting an old store never spams customers about orders from last year.' }],
+    stack: ['Python', 'FastAPI', 'SQLAlchemy', 'SQLite', 'PostgreSQL', 'WooCommerce REST', 'Gemini', 'OAuth 2.0 + PKCE', 'pytest', 'Playwright', 'Docker', 'Render'] }
 ];
+const CRM = [
+  { id: 1, name: 'Aarav Naik', orders: 7, spent: 12400, days: 12 },
+  { id: 2, name: 'Meera Kamat', orders: 2, spent: 2600, days: 75 },
+  { id: 3, name: 'Rohan Desai', orders: 3, spent: 3900, days: 150 },
+  { id: 4, name: 'Sana Shaikh', orders: 1, spent: 899, days: 9 },
+  { id: 5, name: 'Dev Borkar', orders: 2, spent: 1500, days: 41 },
+  { id: 6, name: 'Isha Prabhu', orders: 4, spent: 7200, days: 96 }
+];
+const segOf = c => c.orders === 0 ? 'prospect' : c.days > 120 ? 'churned' : c.days > 60 ? 'at_risk' : (c.spent >= 8000 || c.orders >= 5) ? 'vip' : (c.orders === 1 && c.days <= 30) ? 'new' : 'active';
+const SEGC = { vip: '#c8f560', new: '#7fd4ff', active: '#ecebe6', at_risk: '#ffc861', churned: '#ff7a59', prospect: '#6c6b66' };
+const TICKER = ['Python', 'FastAPI', 'React', 'Next.js', 'TypeScript', 'PostgreSQL', 'Supabase', 'Row-level security', 'Claude API', 'Gemini', 'Three.js', 'React Native', 'Electron', 'SAP', 'pandas', 'Flask', 'WooCommerce', 'Multi-tenant SaaS', 'E2E encryption'];
+const NAV = [['Siemens Lab', 'lab'], ['KalaSphere-AI', 'kalasphere'], ['Projects', 'projects'], ['Stack', 'stack'], ['About', 'about'], ['Contact', 'contact']];
 const pad = n => String(n).padStart(2, '0');
 class Component extends DCLogic {
-  state = { tool: 0, rfcN: 0, rfcRun: false, sn: '402', vifT: 0, vif: [{ p: 0, f: 0 }, { p: 0, f: 0 }, { p: 0, f: 0 }], vifLog: [], shifts: 2, load: 100, fix: false, online: true, phone: [], pc: [], queue: 0, auditN: 0, ten: 0, role: 0, mod: 0, skill: 'Python', proj: 0, pf: 'All', cName: '', cCo: '', cMsg: '', pal: false, palQ: '' };
+  state = { tool: 0, rfcN: 0, rfcRun: false, sn: '402', vifT: 0, vif: [{ p: 0, f: 0 }, { p: 0, f: 0 }, { p: 0, f: 0 }], vifLog: [], shifts: 2, load: 100, fix: false, online: true, phone: [], pc: [], queue: 0, auditN: 0, ten: 0, role: 0, mod: 0, skill: 'Python', proj: 0, pf: 'All', cName: '', cCo: '', cMsg: '', pal: false, palQ: '', sec: 'top', crmRun: false, crmOk: [] };
   palRef = React.createRef();
   componentDidMount() {
     this.vifTimer = setInterval(() => this.setState(s => {
@@ -515,9 +607,15 @@ class Component extends DCLogic {
     }), 1400);
     this.onKey = e => { if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); this.setState(s => ({ pal: !s.pal, palQ: '' })); } else if (e.key === 'Escape') this.setState({ pal: false }); };
     addEventListener('keydown', this.onKey);
+    this.onMove = e => { if (this.raf) return; this.raf = requestAnimationFrame(() => { this.raf = 0; const r = document.documentElement.style; r.setProperty('--mx', e.clientX + 'px'); r.setProperty('--my', e.clientY + 'px'); }); };
+    if (matchMedia('(hover:hover)').matches) addEventListener('pointermove', this.onMove, { passive: true });
+    if (window.IntersectionObserver) {
+      this.io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) this.setState({ sec: en.target.id }); }), { rootMargin: '-35% 0px -60% 0px' });
+      NAV.forEach(([, id]) => { const el = document.getElementById(id); if (el) this.io.observe(el); });
+    }
   }
   componentDidUpdate(_, ps) { if (this.state.pal && !ps.pal) setTimeout(() => this.palRef.current && this.palRef.current.focus(), 20); }
-  componentWillUnmount() { clearInterval(this.vifTimer); clearInterval(this.rfcTimer); removeEventListener('keydown', this.onKey); }
+  componentWillUnmount() { clearInterval(this.vifTimer); clearInterval(this.rfcTimer); removeEventListener('keydown', this.onKey); removeEventListener('pointermove', this.onMove); if (this.io) this.io.disconnect(); }
   go(id) { this.setState({ pal: false }); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 60, behavior: 'smooth' }); }
   renderVals() {
     const s = this.state, A = '#c8f560';
@@ -549,13 +647,23 @@ class Component extends DCLogic {
     const FL = ['All', 'AI', 'Full-stack', 'Security', 'Hackathon'];
     const vis = PROJECTS.map((p, i) => i).filter(i => s.pf === 'All' || PROJECTS[i].tags.includes(s.pf));
     const pi = vis.includes(s.proj) ? s.proj : vis[0], P = PROJECTS[pi], step = s.vifT % P.steps.length;
+    const crmRows = CRM.map(c => { const sg = segOf(c), act = sg === 'at_risk' || sg === 'churned', ok = s.crmOk.includes(c.id);
+      return { name: c.name, seg: sg.replace('_', '-').toUpperCase(), segC: SEGC[sg], days: c.days + 'd ago', ltv: '\u20b9' + c.spent.toLocaleString('en-IN') + ' \u00b7 ' + c.orders + (c.orders === 1 ? ' order' : ' orders'),
+        can: s.crmRun && act && !ok, sent: s.crmRun && act && ok, none: !s.crmRun || !act, noneLabel: s.crmRun ? '\u2014' : 'waiting', approve: () => this.setState(x => ({ crmOk: [...x.crmOk, c.id] })) }; });
+    const crmDrafts = CRM.filter(c => ['at_risk', 'churned'].includes(segOf(c))), crmSent = crmDrafts.filter(c => s.crmOk.includes(c.id)).length;
+    const crmFirst = crmDrafts[0] || CRM[0], fn = crmFirst.name.split(' ')[0];
     return {
+      navItems: NAV.map(([t, id]) => ({ t, href: '#' + id, on: s.sec === id ? '1' : '0' })), ticker: TICKER.concat(TICKER),
+      pjIsCrm: P.name === 'WooCRM', crmRows, crmBtn: s.crmRun ? '\u21bb Reset demo' : '\u25b6 Run retention agent',
+      runCrm: () => this.setState(x => x.crmRun ? { crmRun: false, crmOk: [] } : { crmRun: true, crmOk: [] }),
+      crmRun: s.crmRun, crmSummary: `${crmDrafts.length} win-back drafts created \u00b7 ${crmSent} approved and sent \u00b7 nothing is sent without a click`,
+      crmDraft: `Subject: ${fn}, it\u2019s been a while \u2014 here\u2019s 10% off your next order\n\nHi ${fn}, we noticed it\u2019s been ${crmFirst.days} days since your last order\u2026`,
       pFilters: FL.map(k => { const a = k === s.pf; return { k, n: k === 'All' ? PROJECTS.length : PROJECTS.filter(p => p.tags.includes(k)).length, bg: a ? A : 'transparent', fg: a ? '#0f1012' : '#ecebe6', bd: a ? A : '#3a3c42', pick: () => this.setState({ pf: k }) }; }),
       projList: vis.map(i => { const p = PROJECTS[i], a = i === pi; return { name: p.name, one: p.one, status: p.status, nc: p.status.includes('LIVE') ? A : '#6c6b66', bg: a ? '#1d1f23' : 'transparent', bd: a ? A : '#2a2c31', pick: () => this.setState({ proj: i }) }; }),
       pj: P, pjHasRole: !!P.role, pjHasEx: !!P.exIn, pjExOut: P.exOut || [], pjDecisions: P.decisions, pjStack: P.stack,
       pjLinks: [P.live && { t: '● Live demo ↗', href: P.live, c: A }, { t: 'Source on GitHub ↗', href: P.repo, c: '#ecebe6' }].filter(Boolean),
       pjSteps: P.steps.map((t, i) => ({ t, arrow: i < P.steps.length - 1 ? '→' : '', bg: i === step ? '#1f2614' : 'transparent', bd: i === step ? A : '#2a2c31', c: i === step ? A : '#b9b8b1' })),
-      layers: [{ k: 'CLIENT', v: 'React · React Native · Electron', link: true }, { k: 'API', v: 'Node + Express · Flask · Socket.io', link: true }, { k: 'DATA', v: 'PostgreSQL · Supabase · SQLite · SQL Server', link: true }, { k: 'AUTOMATION', v: 'pandas · SheetJS · schedulers · SAP', link: false }],
+      layers: [{ k: 'CLIENT', v: 'React · React Native · Electron', link: true }, { k: 'API', v: 'Node + Express · Flask · Socket.io', link: true }, { k: 'DATA', v: 'PostgreSQL · Supabase · SQLite · SQL Server', link: true }, { k: 'AI AGENTS', v: 'Claude · Gemini · tool-calling with human approval', link: true }, { k: 'AUTOMATION', v: 'pandas · SheetJS · schedulers · SAP', link: false }],
       openPalette: () => this.setState({ pal: true, palQ: '' }), closePalette: () => this.setState({ pal: false }), stop: e => e.stopPropagation(),
       palOpen: s.pal, palQ: s.palQ, palRef: this.palRef, palItems, setPalQ: e => this.setState({ palQ: e.target.value }), palKey: e => { if (e.key === 'Enter' && palItems[0]) palItems[0].run(); },
       tools, cur, is0: s.tool === 0, is1: s.tool === 1, is2: s.tool === 2, is3: s.tool === 3, is4: s.tool === 4, is5: s.tool === 5,

@@ -48,3 +48,10 @@ If asked to rebuild in a framework: Next.js App Router + TypeScript, one page, c
 
 ## Assets
 None besides Google Fonts. No images. Favicon: optionally add a 32×32 lime (`#c8f560`) rounded square with "GP" in `#0f1012`.
+
+## Rebuilding the bundle after editing the source
+Edit `design/portfolio.dc.html`, then run:
+```bash
+python -I scripts/build.py   # rewrites public/index.html (loader, React, fonts come from design/bundle-base.html + design/fonts.css)
+```
+Commit and push; Vercel redeploys `public/` automatically.
